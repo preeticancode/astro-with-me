@@ -1,20 +1,50 @@
+/* --------- Global style */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    margin: 0px;
+    width:100%
     background-color: #f0f8ff;
     margin: 0;
     text-align: center;
 }
 
-.container {
+/* --------- Header */
+header {
+    border-bottom: 3px solid black;
+    background-color: #5f9ea0;
+    padding: 10px;
+    margin-inline: 0 auto;
+}
+
+p, h1, h2 {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+
+/* --------- Heading */
+
+.heading {
     text-align: center;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 2.5rem;
+}
+
+.logo {
+    height: 40px;
+    padding-right: 5px;
+}
+
+/* --------- Container */
+.container {
+    background-color: #E6ECF0;
+    box-sizing: border-box;
+    width: 85%;
+    height: 65vh;
+    max-height: 450px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
 }
 
 input[type="date"] {
@@ -37,6 +67,17 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+/* --------- Cursor animation */
+#animated{
+    animation-name: move;
+    animation-duration: 5s;
+    nimation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+   cursor: url("http://downloads.totallyfreecursors.com/cursor_files/gold_star.ani"), url("http://downloads.totallyfreecursors.com/thumbnails/gold_star.gif"), auto;
+  }
+  
 
 #result {
     margin-top: 20px;

@@ -22,17 +22,21 @@
 </head>
 
 <body>
-    <h1 class="heading">
-        <img class="logo" src="assets/images/logo.png" alt="logo"> Know Your Zodiac Sign
-    </h1>
+    <header >
+        <h1>Know Your Zodiac</h1>
+        <p id="zodiac"></p>
+    </header>
+    <h2 class="heading">
+        <img class="logo" src="assets/images/logo.png" alt="logo"> Want to know you Zodiac?
+    </h2>
 
     <div class="container">
-        <h1>Enter Your Birth Date</h1>
+        <h3>Enter Your Birth Date</h3>
         <input type="date" id="birthdate" placeholder="Enter your birth date">
-        <button onclick="getZodiacSign()">Find My Zodiac Sign</button>
+        <button onclick="getZodiacSign()" id="animated">Find My Zodiac Sign</button>
         <p id="result"></p>
     </div>
-    <script src="script.js"></script>
+
 
     <script src="assets/js/script.js"></script>
 </body>

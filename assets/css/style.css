@@ -39,7 +39,7 @@ p, h1, h2 {
     background-color: #E6ECF0;
     box-sizing: border-box;
     width: 85%;
-    height: 65vh;
+    height: 50vh;
     max-height: 450px;
     max-width: 830px;
     margin-left: auto;
@@ -59,7 +59,7 @@ button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #4caf50;
+    background-color: #408aae;
     color: white;
     cursor: pointer;
 }
@@ -78,8 +78,13 @@ button:hover {
    cursor: url("http://downloads.totallyfreecursors.com/cursor_files/gold_star.ani"), url("http://downloads.totallyfreecursors.com/thumbnails/gold_star.gif"), auto;
   }
   
-
+/* --------- Result */
 #result {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+#result, #horoscope {
     margin-top: 20px;
     font-size: 1.2em;
 }

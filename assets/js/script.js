@@ -1,4 +1,4 @@
-function getZodiacSign() {
+function getZodiacHoroscope() {
     const birthdate = document.getElementById('birthdate').value;
     if (!birthdate) {
         alert('Please enter your birth date');
@@ -10,7 +10,10 @@ function getZodiacSign() {
     const month = date.getMonth() + 1;
 
     const zodiacSign = determineZodiacSign(day, month);
+    const horoscope = getHoroscope(zodiacSign);
+
     document.getElementById('result').innerText = `Your Zodiac Sign is: ${zodiacSign}`;
+    document.getElementById('horoscope').innerText = `Horoscope: ${horoscope}`;
 }
 
 function determineZodiacSign(day, month) {
@@ -39,4 +42,22 @@ function determineZodiacSign(day, month) {
     } else if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) {
         return "Capricorn";
     }
+}
+
+function getHoroscope(sign) {
+    const horoscopes = {
+        "Aquarius": "Today is a great day to focus on your goals.",
+        "Pisces": "You may find yourself feeling extra creative today.",
+        "Aries": "Be bold and take the initiative in your projects.",
+        "Taurus": "Take time to relax and enjoy the simple pleasures.",
+        "Gemini": "Communication is key, reach out to someone you've been thinking about.",
+        "Cancer": "Nurture your relationships and spend time with loved ones.",
+        "Leo": "Take center stage and let your talents shine.",
+        "Virgo": "Focus on organization and detail in your work.",
+        "Libra": "Seek balance and harmony in your interactions.",
+        "Scorpio": "Embrace change and transformation.",
+        "Sagittarius": "Explore new horizons and seek adventure.",
+        "Capricorn": "Hard work and perseverance will pay off."
+    };
+    return horoscopes[sign];
 }

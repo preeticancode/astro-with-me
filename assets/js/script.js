@@ -72,18 +72,18 @@ function getHoroscope(sign) {
 
 function getZodiacImage(sign) {
     const images = {
-        "Aquarius": "images/aquarius.png",
-        "Pisces": "images/pisces.png",
-        "Aries": "images/aries.png",
-        "Taurus": "images/taurus.png",
-        "Gemini": "images/gemini.png",
-        "Cancer": "images/cancer.png",
-        "Leo": "images/leo.png",
-        "Virgo": "images/virgo.png",
-        "Libra": "images/libra.png",
-        "Scorpio": "images/scorpio.png",
-        "Sagittarius": "images/sagittarius.png",
-        "Capricorn": "images/capricorn.png"
+        "Aquarius": "assets/images/aquarius.png",
+        "Pisces": "assets/images/pisces.png",
+        "Aries": "assets/images/aries.png",
+        "Taurus": "assets/images/taurus.png",
+        "Gemini": "assetsimages/gemini.png",
+        "Cancer": "assets/images/cancer.png",
+        "Leo": "assets/images/leo.png",
+        "Virgo": "assets/images/virgo.png",
+        "Libra": "assets/images/libra.png",
+        "Scorpio": "assets/images/scorpio.png",
+        "Sagittarius": "assets/images/sagittarius.png",
+        "Capricorn": "assets/images/capricorn.png"
     };
     return images[sign];
 }

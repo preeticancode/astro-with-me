@@ -11,9 +11,17 @@ function getZodiacHoroscope() {
 
     const zodiacSign = determineZodiacSign(day, month);
     const horoscope = getHoroscope(zodiacSign);
+    const imageUrl = getZodiacImage(zodiacSign);
 
     document.getElementById('result').innerText = `Your Zodiac Sign is: ${zodiacSign}`;
     document.getElementById('horoscope').innerText = `Horoscope: ${horoscope}`;
+
+    const imageContainer = document.getElementById('zodiacImage');
+    imageContainer.innerHTML = '';  // Clear any existing image
+    const img = document.createElement('img');
+    img.src = imageUrl;
+    img.alt = zodiacSign;
+    imageContainer.appendChild(img);
 }
 
 function determineZodiacSign(day, month) {
@@ -60,4 +68,22 @@ function getHoroscope(sign) {
         "Capricorn": "Hard work and perseverance will pay off."
     };
     return horoscopes[sign];
+}
+
+function getZodiacImage(sign) {
+    const images = {
+        "Aquarius": "images/aquarius.png",
+        "Pisces": "images/pisces.png",
+        "Aries": "images/aries.png",
+        "Taurus": "images/taurus.png",
+        "Gemini": "images/gemini.png",
+        "Cancer": "images/cancer.png",
+        "Leo": "images/leo.png",
+        "Virgo": "images/virgo.png",
+        "Libra": "images/libra.png",
+        "Scorpio": "images/scorpio.png",
+        "Sagittarius": "images/sagittarius.png",
+        "Capricorn": "images/capricorn.png"
+    };
+    return images[sign];
 }

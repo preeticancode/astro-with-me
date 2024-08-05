@@ -75,7 +75,8 @@ button:hover {
     nimation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-   cursor: url("http://downloads.totallyfreecursors.com/cursor_files/gold_star.ani"), url("http://downloads.totallyfreecursors.com/thumbnails/gold_star.gif"), auto;
+   cursor: url("http://downloads.totallyfreecursors.com/cursor_files/gold_star.ani"), 
+   url("http://downloads.totallyfreecursors.com/thumbnails/gold_star.gif"), auto;
   }
   
 /* --------- Result */

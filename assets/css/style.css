@@ -39,7 +39,6 @@ p, h1, h2 {
     background-color: #E6ECF0;
     box-sizing: border-box;
     width: 85%;
-    height: 450vh;
     max-height: 750px;
     max-width: 830px;
     margin-left: auto;
@@ -72,7 +71,7 @@ button:hover {
 #animated{
     animation-name: move;
     animation-duration: 5s;
-    nimation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
    cursor: url("http://downloads.totallyfreecursors.com/cursor_files/gold_star.ani"), 

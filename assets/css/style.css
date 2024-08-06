@@ -30,6 +30,8 @@ p, h1, h2 {
     color: #ffffff; /* Changed to white for better contrast */
     font-weight: bolder;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: Add a subtle shadow for better contrast */
+    text-decoration-color: blueviolet;
+    text-transform: uppercase;
 }
 
 .logo {

@@ -1,5 +1,4 @@
-
-function getZodiacAndNumerology() {
+function getZodiacNumerologyAndBirthChart() {
     const birthdate = document.getElementById('birthdate').value;
     if (!birthdate) {
         alert('Please enter your birth date');
@@ -16,10 +15,12 @@ function getZodiacAndNumerology() {
     const imageUrl = getZodiacImage(zodiacSign);
     const numerologyNumber = calculateNumerology(day, month, year);
     const numerologyReading = getNumerologyReading(numerologyNumber);
+    const birthChart = calculateBirthChart(day, month, year);
 
     document.getElementById('result').innerText = `Your Zodiac Sign is: ${zodiacSign}`;
     document.getElementById('horoscope').innerText = `Horoscope: ${horoscope}`;
     document.getElementById('numerology').innerText = `Your Numerology Number is: ${numerologyNumber}. ${numerologyReading}`;
+    document.getElementById('birthChart').innerText = `Your Birth Chart:\nSun Sign: ${birthChart.sunSign}\nMoon Sign: ${birthChart.moonSign}\nRising Sign: ${birthChart.risingSign}`;
 
     const imageContainer = document.getElementById('zodiacImage');
     imageContainer.innerHTML = '';  // Clear any existing image
@@ -79,7 +80,7 @@ function getZodiacImage(sign) {
     const images = {
         "Aquarius": "assets/images/aquarius.png",
         "Pisces": "assets/images/pisces.png",
-        "Aries": "assetsimages/aries.png",
+        "Aries": "assets/images/aries.png",
         "Taurus": "assets/images/taurus.png",
         "Gemini": "assets/images/gemini.png",
         "Cancer": "assets/images/cancer.png",
@@ -118,4 +119,31 @@ function getNumerologyReading(number) {
         9: "You are compassionate and generous."
     };
     return readings[number];
+}
+
+function calculateBirthChart(day, month, year) {
+    const sunSign = determineZodiacSign(day, month);
+    const moonSign = determineMoonSign(day, month);
+    const risingSign = determineRisingSign(day, month, year);
+    return {
+        sunSign,
+        moonSign,
+        risingSign
+    };
+}
+
+function determineMoonSign(day, month) {
+    // Simplified calculation for the Moon sign based on birthdate
+    // In reality, Moon sign calculation requires the exact time and location of birth
+    const signs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
+    const index = (day + month) % 12;
+    return signs[index];
+}
+
+function determineRisingSign(day, month, year) {
+    // Simplified calculation for the Rising sign based on birthdate
+    // In reality, Rising sign calculation requires the exact time and location of birth
+    const signs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
+    const index = (day + month + year) % 12;
+    return signs[index];
 }

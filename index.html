@@ -18,24 +18,22 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
      <!-- Title -->
-    <title>Know Your Zodiac</title>
+    <title>Astro With Me</title>
 </head>
 
 <body>
-    <header >
-        <h1>Know Your Zodiac</h1>
+    <header>
+        <h1>Astro With Me</h1>
         <p id="zodiac"></p>
     </header>
-    <h1 class="heading">
-        <img class="logo" src="assets/images/logo.webp" alt="logo"> Want to know you Zodiac?
-    </h1>
-
+    <h4 class="heading"><img class="logo" src="assets/images/logo.webp" alt="logo">Know your Zodiac Sign, Horoscope and Numerology?</h4>
     <div class="container">
-        <h1>Pease Enter Your Birthdate !</h1>
+        <h1>Enter Your Birthdate</h1>
         <input type="date" id="birthdate" placeholder="Enter your birth date">
-        <button onclick="getZodiacHoroscope()" id="animated">Find My Horoscope</button>
+        <button onclick="getZodiacAndNumerology()" id="animated">Calculate</button>
         <p id="result"></p>
         <p id="horoscope"></p>
+        <p id="numerology"></p>
         <div id="zodiacImage"></div>
     </div>
 

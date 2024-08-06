@@ -1,4 +1,4 @@
-function getZodiacHoroscope() {
+function getZodiacAndNumerology() {
     const birthdate = document.getElementById('birthdate').value;
     if (!birthdate) {
         alert('Please enter your birth date');
@@ -8,13 +8,17 @@ function getZodiacHoroscope() {
     const date = new Date(birthdate);
     const day = date.getDate();
     const month = date.getMonth() + 1;
+    const year = date.getFullYear();
 
     const zodiacSign = determineZodiacSign(day, month);
     const horoscope = getHoroscope(zodiacSign);
     const imageUrl = getZodiacImage(zodiacSign);
+    const numerologyNumber = calculateNumerology(day, month, year);
+    const numerologyReading = getNumerologyReading(numerologyNumber);
 
     document.getElementById('result').innerText = `Your Zodiac Sign is: ${zodiacSign}`;
     document.getElementById('horoscope').innerText = `Horoscope: ${horoscope}`;
+    document.getElementById('numerology').innerText = `Your Numerology Number is: ${numerologyNumber}. ${numerologyReading}`;
 
     const imageContainer = document.getElementById('zodiacImage');
     imageContainer.innerHTML = '';  // Clear any existing image
@@ -74,9 +78,9 @@ function getZodiacImage(sign) {
     const images = {
         "Aquarius": "assets/images/aquarius.png",
         "Pisces": "assets/images/pisces.png",
-        "Aries": "assets/images/aries.png",
+        "Aries": "assetsimages/aries.png",
         "Taurus": "assets/images/taurus.png",
-        "Gemini": "assetsimages/gemini.png",
+        "Gemini": "assets/images/gemini.png",
         "Cancer": "assets/images/cancer.png",
         "Leo": "assets/images/leo.png",
         "Virgo": "assets/images/virgo.png",
@@ -86,4 +90,31 @@ function getZodiacImage(sign) {
         "Capricorn": "assets/images/capricorn.png"
     };
     return images[sign];
+}
+
+function calculateNumerology(day, month, year) {
+    const sum = day + month + year;
+    return reduceToSingleDigit(sum);
+}
+
+function reduceToSingleDigit(number) {
+    while (number > 9) {
+        number = number.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+    }
+    return number;
+}
+
+function getNumerologyReading(number) {
+    const readings = {
+        1: "You are a leader with strong independence.",
+        2: "You are diplomatic and sensitive to others.",
+        3: "You are creative and enjoy expressing yourself.",
+        4: "You are practical and hardworking.",
+        5: "You crave adventure and variety.",
+        6: "You are responsible and caring.",
+        7: "You are introspective and analytical.",
+        8: "You are ambitious and focused on success.",
+        9: "You are compassionate and generous."
+    };
+    return readings[number];
 }

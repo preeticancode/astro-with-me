@@ -89,14 +89,14 @@ button:hover {
   
 /* --------- Result */
 #result, #horoscope, #numerology, #birthChart {
-    margin-top: 20px;
-    font-size: 1.2em;
+    margin-top: 10px;
+    font-size: 1em;
 }
 
 #zodiacImage img {
-    margin-top: 20px;
-    width: 100px;
-    height: 100px;
+    margin-top: 10px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
 }
 /* --------- footer */

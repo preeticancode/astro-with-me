@@ -1,3 +1,5 @@
+// Clear any existing image Fetches the user's birthdate from the input field 
+// displays an alert and stops the function if no birthdate is entered.
 function getZodiacNumerologyAndBirthChart() {
     const birthdate = document.getElementById('birthdate').value;
     if (!birthdate) {
@@ -5,11 +7,15 @@ function getZodiacNumerologyAndBirthChart() {
         return;
     }
 
+    // Converts the birthdate string into a Date object
     const date = new Date(birthdate);
     const day = date.getDate();
     const month = date.getMonth() + 1;
     const year = date.getFullYear();
 
+// Determines the zodiac sign, horoscope, and zodiac image URL based on the birthdate.
+// Calculates the numerology number and reading.
+// Generates a simplified birth chart.
     const zodiacSign = determineZodiacSign(day, month);
     const horoscope = getHoroscope(zodiacSign);
     const imageUrl = getZodiacImage(zodiacSign);
@@ -17,19 +23,24 @@ function getZodiacNumerologyAndBirthChart() {
     const numerologyReading = getNumerologyReading(numerologyNumber);
     const birthChart = calculateBirthChart(day, month, year);
 
+// Updates the HTML to display the zodiac sign, horoscope, numerology number and reading, and birth chart.
     document.getElementById('result').innerText = `Your Zodiac Sign is: ${zodiacSign}`;
     document.getElementById('horoscope').innerText = `Horoscope: ${horoscope}`;
     document.getElementById('numerology').innerText = `Your Numerology Number is: ${numerologyNumber}. ${numerologyReading}`;
     document.getElementById('birthChart').innerText = `Your Birth Chart:\nSun Sign: ${birthChart.sunSign}\nMoon Sign: ${birthChart.moonSign}\nRising Sign: ${birthChart.risingSign}`;
 
+// Clears any existing zodiac image.
+// Creates a new image element and sets its src and alt attributes.
+// Appends the image to the HTML.
     const imageContainer = document.getElementById('zodiacImage');
-    imageContainer.innerHTML = '';  // Clear any existing image
+    imageContainer.innerHTML = '';  
     const img = document.createElement('img');
     img.src = imageUrl;
     img.alt = zodiacSign;
     imageContainer.appendChild(img);
 }
 
+// Uses if-else conditions to return the correct zodiac sign.
 function determineZodiacSign(day, month) {
     if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) {
         return "Aquarius";
@@ -58,6 +69,7 @@ function determineZodiacSign(day, month) {
     }
 }
 
+// This function returns a horoscope message for a given zodiac sign
 function getHoroscope(sign) {
     const horoscopes = {
         "Aquarius": "Today is a great day to focus on your goals.",
@@ -76,6 +88,7 @@ function getHoroscope(sign) {
     return horoscopes[sign];
 }
 
+// This function returns the URL of an image corresponding to the zodiac sign
 function getZodiacImage(sign) {
     const images = {
         "Aquarius": "assets/images/aquarius.png",
@@ -94,11 +107,13 @@ function getZodiacImage(sign) {
     return images[sign];
 }
 
+// This function calculates the numerology number based on the birthdate
 function calculateNumerology(day, month, year) {
     const sum = day + month + year;
     return reduceToSingleDigit(sum);
 }
 
+// This function reduces a number to a single digit
 function reduceToSingleDigit(number) {
     while (number > 9) {
         number = number.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
@@ -106,6 +121,7 @@ function reduceToSingleDigit(number) {
     return number;
 }
 
+// This function returns a numerology reading based on the numerology number
 function getNumerologyReading(number) {
     const readings = {
         1: "You are a leader with strong independence.",
@@ -121,6 +137,7 @@ function getNumerologyReading(number) {
     return readings[number];
 }
 
+// This function calculates a simplified birth chart
 function calculateBirthChart(day, month, year) {
     const sunSign = determineZodiacSign(day, month);
     const moonSign = determineMoonSign(day, month);
@@ -132,6 +149,7 @@ function calculateBirthChart(day, month, year) {
     };
 }
 
+// These functions determine the moon sign and rising sign based on simplified calculations
 function determineMoonSign(day, month) {
     // Simplified calculation for the Moon sign based on birthdate
     // In reality, Moon sign calculation requires the exact time and location of birth

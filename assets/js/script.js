@@ -7,7 +7,7 @@ function getZodiacNumerologyAndBirthChart() {
         return;
     }
 
-// Converts the birthdate string into a Date object
+   // Converts the birthdate string into a Date object
     const date = new Date(birthdate);
     const day = date.getDate();
     const month = date.getMonth() + 1;
@@ -152,7 +152,6 @@ function calculateBirthChart(day, month, year) {
 // These functions determine the moon sign and rising sign based on simplified calculations
 function determineMoonSign(day, month) {
     // Simplified calculation for the Moon sign based on birthdate
-    // In reality, Moon sign calculation requires the exact time and location of birth
     const signs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
     const index = (day + month) % 12;
     return signs[index];
@@ -160,8 +159,79 @@ function determineMoonSign(day, month) {
 
 function determineRisingSign(day, month, year) {
     // Simplified calculation for the Rising sign based on birthdate
-    // In reality, Rising sign calculation requires the exact time and location of birth
     const signs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
     const index = (day + month + year) % 12;
+    return signs[index];
+}
+
+// calculates the user's zodiac sign, horoscope, numerology number, and a simplified birth chart, which includes the sun sign, moon sign
+function getZodiacNumerologyAndBirthChart() {
+    const birthdate = document.getElementById('birthdate').value;
+    const birthTime = document.getElementById('birthTime').value; // Get time of birth
+
+    if (!birthdate) {
+        alert('Please enter your birth date');
+        return;
+    }
+
+    if (!birthTime) {
+        alert('Please enter your time of birth');
+        return;
+    }
+
+    const date = new Date(birthdate);
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+
+    // Parse the birth time into hours and minutes
+    const timeParts = birthTime.split(":");
+    const hours = parseInt(timeParts[0]);
+    const minutes = parseInt(timeParts[1]);
+
+    const zodiacSign = determineZodiacSign(day, month);
+    const horoscope = getHoroscope(zodiacSign);
+    const imageUrl = getZodiacImage(zodiacSign);
+    const numerologyNumber = calculateNumerology(day, month, year);
+    const numerologyReading = getNumerologyReading(numerologyNumber);
+    const birthChart = calculateBirthChart(day, month, year, hours, minutes); // Pass time of birth
+
+    document.getElementById('result').innerText = `Your Zodiac Sign is: ${zodiacSign}`;
+    document.getElementById('horoscope').innerText = `Horoscope: ${horoscope}`;
+    document.getElementById('numerology').innerText = `Your Numerology Number is: ${numerologyNumber}. ${numerologyReading}`;
+    document.getElementById('birthChart').innerText = `Your Birth Chart:\nSun Sign: ${birthChart.sunSign}\nMoon Sign: ${birthChart.moonSign}\nRising Sign: ${birthChart.risingSign}`;
+
+    const imageContainer = document.getElementById('zodiacImage');
+    imageContainer.innerHTML = '';  
+    const img = document.createElement('img');
+    img.src = imageUrl;
+    img.alt = zodiacSign;
+    imageContainer.appendChild(img);
+}
+
+function calculateBirthChart(day, month, year, hours, minutes) {
+    const sunSign = determineZodiacSign(day, month);
+    const moonSign = determineMoonSign(day, month, hours, minutes); // Include time in calculation
+    const risingSign = determineRisingSign(day, month, year, hours, minutes); // Include time in calculation
+    return {
+        sunSign,
+        moonSign,
+        risingSign
+    };
+}
+
+//logic for determining Moon Sign based on date and time
+function determineMoonSign(day, month, hours, minutes) {
+    // Simplified moon sign calculation (this is a placeholder)
+    const signs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
+    const index = (day + month + Math.floor(hours / 2)) % 12;
+    return signs[index];
+}
+
+// logic for determining Rising Sign based on date and time
+function determineRisingSign(day, month, year, hours, minutes) {
+    // Simplified rising sign calculation (this is a placeholder)
+    const signs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
+    const index = (day + month + year + hours + Math.floor(minutes / 10)) % 12;
     return signs[index];
 }

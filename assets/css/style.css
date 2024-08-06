@@ -1,11 +1,16 @@
 /* --------- Global style */
-body {
+body, html {
     font-family: Arial, sans-serif;
     margin: 0;
     width: 100%;
     background-color: #f0f8ff;
     text-align: center;
     color: #ffffff; /* Set a default text color */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+* {
+    box-sizing: border-box;
 }
 
 /* --------- Header */
@@ -21,15 +26,15 @@ p, h1, h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: italic;
     font-weight: 300;
-    color: #ffffff; /* Changed to white for better contrast */
+    color: #ffffff;
 }
 
 .heading {
     text-align: center;
     font-size: 2rem;
-    color: #ffffff; /* Changed to white for better contrast */
+    color: #ffffff;
     font-weight: bolder;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: Add a subtle shadow for better contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     text-decoration-color: blueviolet;
     text-transform: uppercase;
 }
@@ -42,21 +47,21 @@ p, h1, h2 {
 /* --------- Background image */
 body {
     background-image: url("../images/newback.webp");
-    background-size: cover;  
-    background-position: center;  
+    background-size: cover;
+    background-position: center;
     background-repeat: repeat;
 }
 
 /* --------- Container */
 .container {
     background-color: #9631de;
-    box-sizing: border-box;
     width: 85%;
     max-width: 830px;
     margin: 0 auto;
     padding: 20px;
-    border-radius: 10px; /* Optional: adds rounded corners to the container */
-    color: #ffffff; /* Ensure text inside the container is visible */
+    border-radius: 10px;
+    color: #ffffff;
+    overflow: hidden;
 }
 
 input[type="date"],
@@ -67,8 +72,8 @@ input[type="date"],
     border: 1px solid #ccc;
     border-radius: 5px;
     max-width: 200px;
-    background-color: #ffffff; /* Improved contrast for input fields */
-    color: #000000; /* Dark text color for readability */
+    background-color: #ffffff;
+    color: #000000;
 }
 
 button {
@@ -100,7 +105,7 @@ button:hover {
 #result, #horoscope, #numerology, #birthChart {
     margin-top: 10px;
     font-size: 1em;
-    color: #ffffff; /* Ensure result text is visible */
+    color: #ffffff;
 }
 
 #zodiacImage img {
@@ -108,6 +113,7 @@ button:hover {
     width: 80px;
     height: 80px;
     object-fit: contain;
+    max-width: 100%;
 }
 
 /* --------- Footer */
@@ -122,15 +128,14 @@ footer {
     left: 0;
     width: 100%;
     font-size: 14px;
-    color: #ffffff; /* Ensure footer text is visible */
+    color: #ffffff;
 }
 
 /* --------- Media Queries */
-
-/* Adjustments for devices with max-width of 1024px */
 @media screen and (max-width: 1024px) {
     body {
         font-size: 14px;
+        overflow-x: hidden;
     }
 
     .container {
@@ -145,7 +150,6 @@ footer {
     }
 }
 
-/* Adjustments for devices with min-width of 1025px */
 @media screen and (min-width: 1025px) {
     body {
         font-size: 16px;
@@ -155,5 +159,6 @@ footer {
         width: 70%;
         max-width: 830px;
         padding: 20px;
+        margin: 0 auto;
     }
 }

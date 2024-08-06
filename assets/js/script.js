@@ -7,7 +7,7 @@ function getZodiacNumerologyAndBirthChart() {
         return;
     }
 
-    // Converts the birthdate string into a Date object
+// Converts the birthdate string into a Date object
     const date = new Date(birthdate);
     const day = date.getDate();
     const month = date.getMonth() + 1;

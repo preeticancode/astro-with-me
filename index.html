@@ -31,14 +31,26 @@
     <h2 class="heading"><img class="logo" src="assets/images/logo.webp" alt="logo">Free Zodiac Sign, Horoscope, Numerology and Birth Chart</h2>
     <!-- Input Form and Result Display -->
     <div class="container">
-        <h2>Enter Your Birthdate</h2>
-        <input type="date" id="birthdate" placeholder="Enter your birth date">
-        <button onclick="getZodiacNumerologyAndBirthChart()" id="animated">Submit</button>
-        <p id="result"></p>
-        <p id="horoscope"></p>
-        <p id="numerology"></p>
-        <div id="birthChart"></div>
-        <div id="zodiacImage"></div>
+        <h1>Astro With Me</h1>
+    <form id="birthDetailsForm">
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" required>
+        <br>
+        <label for="birthTime">Time of Birth:</label>
+        <input type="time" id="birthTime">
+        <br>
+        <label for="birthPlace">Place of Birth:</label>
+        <input type="text" id="birthPlace" placeholder="Enter city or region">
+        <br>
+        <button type="button" onclick="getZodiacNumerologyAndBirthChart()" id="animated">Calculate</button>
+    </form>
+
+    <div id="result"></div>
+    <div id="horoscope"></div>
+    <div id="numerology"></div>
+    <div id="birthChart"></div>
+    <div id="zodiacImage"></div>
+
     </div>
 <!-- footer -->
 <footer class="footer">

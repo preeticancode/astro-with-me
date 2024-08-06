@@ -33,6 +33,15 @@ p, h1, h2 {
     height: 40px;
     padding-right: 5px;
 }
+/* Background image */
+body {
+    background-image: url("../images/astrology_clipart.png");
+    background-size: cover;  /* the image covers the whole background */
+    background-position: center;  /* Centers the background image */
+    background-repeat: no-repeat;  /* Prevents the background image from repeating */
+    margin: 0;
+    background-blend-mode: inherit;
+}
 
 /* --------- Container */
 .container {

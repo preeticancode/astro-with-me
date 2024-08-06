@@ -1,3 +1,4 @@
+
 function getZodiacAndNumerology() {
     const birthdate = document.getElementById('birthdate').value;
     if (!birthdate) {

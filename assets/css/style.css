@@ -10,21 +10,23 @@ body {
 /* --------- Header */
 header {
     border-bottom: 3px solid black;
-    background-color: #5f9ea0;
+    background-color: #091c5d;
     padding: 10px;
     margin: 0 auto;
 }
 
 /* --------- Heading */
 p, h1, h2 {
-    font-family: "Inter", sans-serif;
-    font-style: normal;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
     font-weight: 300;
+    color: #ccc;
 }
 
 .heading {
     text-align: center;
     font-size: 1.5rem;
+    color: #ccc;
 }
 
 .logo {
@@ -34,20 +36,19 @@ p, h1, h2 {
 
 /* --------- Background image */
 body {
-    background-image: url("../images/astrology_clipart.png");
+    background-image: url("../images/newback.jpg");
     background-size: cover;  
     background-position: center;  
-    background-repeat: no-repeat;  
+    background-repeat: repeat;
 }
 
 /* --------- Container */
 .container {
-    background-color: #E6ECF0;
+    background-color: #9631de;
     box-sizing: border-box;
     width: 85%;
     max-width: 830px;
     margin: 0 auto;
-    padding: 1%;
 }
 
 input[type="date"],
@@ -57,7 +58,6 @@ input[type="date"],
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
     max-width: 200px;
 }
 
@@ -65,7 +65,7 @@ button {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    background-color: #216d7d;
+    background-color: #160e6d;
     color: white;
     cursor: pointer;
     margin-top: 5px;
@@ -103,7 +103,7 @@ button:hover {
 footer {
     text-align: center;
     border-top: 3px solid black;
-    background-color: #5f9ea0;
+    background-color: #091c5d;
     margin-top: 5px;
     padding: 5px;
     position: fixed;

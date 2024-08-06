@@ -56,8 +56,8 @@ body {
 }
 
 input[type="date"] {
-    padding: 10px;
-    margin: 10px 0;
+    padding: 5px;
+    margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100px;
@@ -78,13 +78,19 @@ button:hover {
 }
 
 #birthPlace {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100px;
 }
 
 #birthTime {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100px;
 }
 /* --------- Cursor animation */
 #animated{

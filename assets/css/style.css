@@ -123,16 +123,16 @@ button {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    background-color: #0e0986;
+    background-color: #9631de; 
     color: #ffffff;
     cursor: pointer;
     margin-top: 10px;
-    font-size: 0.9rem; /* Smaller font size for buttons */
+    font-size: 0.9rem;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0dc3e7;
+    background-color: #d35400; /* Slightly darker orange for hover state */
 }
 
 /* Cursor Animation */

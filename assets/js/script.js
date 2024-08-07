@@ -319,3 +319,16 @@ document.getElementById('submitQuiz').addEventListener('click', () => {
         alert('Please select an answer before proceeding.');
     }
 });
+
+// Function to set the max date for the birthdate input to today
+function setMaxDate() {
+    const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+    document.getElementById('birthdate').setAttribute('max', today);
+}
+
+// Call setMaxDate function when the page loads
+window.onload = () => {
+    setMaxDate();
+    setupMusicControls();
+    setupQuiz();
+};

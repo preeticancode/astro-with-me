@@ -1,3 +1,4 @@
+// Function to get zodiac, numerology, and birth chart details
 function getZodiacNumerologyAndBirthChart() {
     const birthdate = document.getElementById('birthdate').value;
     const birthTime = document.getElementById('birthTime').value; // Get time of birth
@@ -12,6 +13,7 @@ function getZodiacNumerologyAndBirthChart() {
         return;
     }
 
+    // Converts the birthdate string into a JavaScript Date object to extract day, month, and year
     const date = new Date(birthdate);
     const day = date.getDate();
     const month = date.getMonth() + 1;
@@ -22,6 +24,7 @@ function getZodiacNumerologyAndBirthChart() {
     const hours = parseInt(timeParts[0]);
     const minutes = parseInt(timeParts[1]);
 
+    // Calculate zodiac sign, horoscope, image URL, numerology, and birth chart
     const zodiacSign = determineZodiacSign(day, month);
     const horoscope = getHoroscope(zodiacSign);
     const imageUrl = getZodiacImage(zodiacSign);
@@ -29,20 +32,29 @@ function getZodiacNumerologyAndBirthChart() {
     const numerologyReading = getNumerologyReading(numerologyNumber);
     const birthChart = calculateBirthChart(day, month, year, hours, minutes); // Pass time of birth
 
+    // Display results in HTML elements
     document.getElementById('result').innerText = `Your Zodiac Sign is: ${zodiacSign}`;
     document.getElementById('horoscope').innerText = `Horoscope: ${horoscope}`;
     document.getElementById('numerology').innerText = `Your Numerology Number is: ${numerologyNumber}. ${numerologyReading}`;
     document.getElementById('birthChart').innerText = `Your Birth Chart:\nSun Sign: ${birthChart.sunSign}\nMoon Sign: ${birthChart.moonSign}\nRising Sign: ${birthChart.risingSign}`;
 
+    // Display zodiac image
     const imageContainer = document.getElementById('zodiacImage');
     imageContainer.innerHTML = '';  
     const img = document.createElement('img');
     img.src = imageUrl;
     img.alt = zodiacSign;
     imageContainer.appendChild(img);
+
+    // Optionally start the music here if you want it to play when results are displayed
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    backgroundMusic.play();
+
+    // Trigger fireworks effect
+    fireworkEffect();
 }
 
-// Uses if-else conditions to return the correct zodiac sign.
+// Function to determine zodiac sign based on day and month
 function determineZodiacSign(day, month) {
     if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) {
         return "Aquarius";
@@ -71,7 +83,7 @@ function determineZodiacSign(day, month) {
     }
 }
 
-// This function returns a horoscope message for a given zodiac sign
+// Function to get horoscope message for a given zodiac sign
 function getHoroscope(sign) {
     const horoscopes = {
         "Aquarius": "Today is a great day to focus on your goals.",
@@ -90,7 +102,7 @@ function getHoroscope(sign) {
     return horoscopes[sign];
 }
 
-// This function returns the URL of an image corresponding to the zodiac sign
+// Function to get URL of an image corresponding to the zodiac sign
 function getZodiacImage(sign) {
     const images = {
         "Aquarius": "assets/images/aquarius.png",
@@ -109,13 +121,13 @@ function getZodiacImage(sign) {
     return images[sign];
 }
 
-// This function calculates the numerology number based on the birthdate
+// Function to calculate numerology number based on the birthdate
 function calculateNumerology(day, month, year) {
     const sum = day + month + year;
     return reduceToSingleDigit(sum);
 }
 
-// This function reduces a number to a single digit
+// Function to reduce a number to a single digit
 function reduceToSingleDigit(number) {
     while (number > 9) {
         number = number.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
@@ -123,7 +135,7 @@ function reduceToSingleDigit(number) {
     return number;
 }
 
-// This function returns a numerology reading based on the numerology number
+// Function to get numerology reading based on the numerology number
 function getNumerologyReading(number) {
     const readings = {
         1: "You are a leader with strong independence.",
@@ -139,7 +151,7 @@ function getNumerologyReading(number) {
     return readings[number];
 }
 
-// This function calculates a simplified birth chart
+// Function to calculate a simplified birth chart
 function calculateBirthChart(day, month, year, hours, minutes) {
     const sunSign = determineZodiacSign(day, month);
     const moonSign = determineMoonSign(day, month, hours, minutes); // Include time in calculation
@@ -151,73 +163,21 @@ function calculateBirthChart(day, month, year, hours, minutes) {
     };
 }
 
-// logic for determining Moon Sign based on date and time
+// Simplified moon sign calculation (placeholder)
 function determineMoonSign(day, month, hours, minutes) {
-    // Simplified moon sign calculation (this is a placeholder)
     const signs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
     const index = (day + month + Math.floor(hours / 2)) % 12;
     return signs[index];
 }
 
-// logic for determining Rising Sign based on date and time
+// Simplified rising sign calculation (placeholder)
 function determineRisingSign(day, month, year, hours, minutes) {
-    // Simplified rising sign calculation (this is a placeholder)
     const signs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
     const index = (day + month + year + hours + Math.floor(minutes / 10)) % 12;
     return signs[index];
 }
 
-// This function is the core of the script, handling the user's input, processing it, and displaying the results.
-function getZodiacNumerologyAndBirthChart() {
-    const birthdate = document.getElementById('birthdate').value;
-    const birthTime = document.getElementById('birthTime').value; // Get time of birth
-
-    if (!birthdate) {
-        alert('Please enter your birth date');
-        return;
-    }
-
-    if (!birthTime) {
-        alert('Please enter your time of birth');
-        return;
-    }
-
-    // Converts the birthdate string into a JavaScript Date object to extract the day, month, and year.
-    const date = new Date(birthdate);
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-
-    // the birth time into hours and minutes
-    const timeParts = birthTime.split(":");
-    const hours = parseInt(timeParts[0]);
-    const minutes = parseInt(timeParts[1]);
-    
-    // Calls the determineZodiacSign function to determine the user's zodiac sign based on their birthdate.
-    const zodiacSign = determineZodiacSign(day, month);
-    const horoscope = getHoroscope(zodiacSign);
-    const imageUrl = getZodiacImage(zodiacSign);
-    const numerologyNumber = calculateNumerology(day, month, year);
-    const numerologyReading = getNumerologyReading(numerologyNumber);
-    const birthChart = calculateBirthChart(day, month, year, hours, minutes); // Pass time of birth
-
-    // Displays the zodiac sign, horoscope, numerology number, and birth chart details in the designated HTML elements.
-    document.getElementById('result').innerText = `Your Zodiac Sign is: ${zodiacSign}`;
-    document.getElementById('horoscope').innerText = `Horoscope: ${horoscope}`;
-    document.getElementById('numerology').innerText = `Your Numerology Number is: ${numerologyNumber}. ${numerologyReading}`;
-    document.getElementById('birthChart').innerText = `Your Birth Chart:\nSun Sign: ${birthChart.sunSign}\nMoon Sign: ${birthChart.moonSign}\nRising Sign: ${birthChart.risingSign}`;
-
-    const imageContainer = document.getElementById('zodiacImage');
-    imageContainer.innerHTML = '';  
-    const img = document.createElement('img');
-    img.src = imageUrl;
-    img.alt = zodiacSign;
-    imageContainer.appendChild(img);
-
-    // Trigger fireworks effect when result is displayed
-    fireworkEffect();
-}
-
+// Function to trigger fireworks effect
 function fireworkEffect() {
     confetti({
         particleCount: 100,
@@ -226,3 +186,24 @@ function fireworkEffect() {
     });
 }
 
+// Function to handle music playback controls
+function setupMusicControls() {
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    const playButton = document.getElementById('playMusic');
+    const pauseButton = document.getElementById('pauseMusic');
+
+    // Play music when the play button is clicked
+    playButton.addEventListener('click', () => {
+        backgroundMusic.play();
+    });
+
+    // Pause music when the pause button is clicked
+    pauseButton.addEventListener('click', () => {
+        backgroundMusic.pause();
+    });
+}
+
+// Call setupMusicControls function when the page loads
+window.onload = () => {
+    setupMusicControls();
+};

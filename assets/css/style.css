@@ -3,82 +3,82 @@ body, html {
     font-family: 'Arial', sans-serif;
     margin: 0;
     width: 100%;
-    background-color: #f0f8ff; /* Light background for good contrast */
+    background-color: #f0f8ff;
     text-align: center;
-    color: #ffffff; /* Default text color for better contrast */
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    min-height: 100vh; /* Ensure the body covers the full height of the viewport */
+    color: #ffffff;
+    overflow-x: hidden;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-size: 18px; /* Default font size for desktop */
-    line-height: 1.6; /* Improved readability */
+    font-size: 16px; /* Default font size for desktop */
+    line-height: 1.6;
 }
 
 /* Ensure the main content fills the available space */
 .container {
-    background-color: #9631de; /* Main content background */
-    width: 90%; /* Increased width for better mobile fit */
+    background-color: #9631de;
+    width: 90%;
     max-width: 830px;
-    margin: 20px auto; /* Add margin to separate from other content */
+    margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
-    color: #ffffff; /* Text color in the container */
+    color: #ffffff;
     overflow: hidden;
-    flex: 1; /* Allow the container to grow and fill available space */
+    flex: 1;
 }
 
 /* Header */
 header {
     border-bottom: 3px solid #130707; 
-    background-color: #091c5d; /* Darker background for header */
-    padding: 15px 20px; /* Increased padding for better spacing */
-    width: 100%; /* Full width */
-    box-sizing: border-box; /* Include padding and borders in the element's total width */
-    margin: 0; /* Remove default margin */
+    background-color: #091c5d;
+    padding: 15px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 /* Heading Styles */
 h1, h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #ffffff; /* Consistent heading color */
-    margin: 0; /* Remove default margin */
+    color: #ffffff;
+    margin: 0;
 }
 
 h1 {
-    font-size: 2.8rem; /* Larger font size for desktop main headings */
-    font-weight: 700; /* Bolder weight for main headings */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for better readability */
-    text-transform: uppercase; /* Consistent heading style */
+    font-size: 2.2rem; /* Smaller font size for desktop main headings */
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
 }
 
 h2 {
-    font-size: 2.2rem; /* Slightly smaller font size for desktop sub-headings */
+    font-size: 1.8rem; /* Smaller font size for desktop sub-headings */
     font-weight: 600;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Shadow for better readability */
-    margin-bottom: 0.5rem; /* Space below the sub-headings */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    margin-bottom: 0.5rem;
 }
 
 /* Paragraphs */
 p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #ffffff; /* Paragraph text color */
-    font-size: 1.1rem; /* Base font size for paragraphs on desktop */
-    line-height: 1.7; /* Improved readability with line-height */
-    margin-bottom: 1rem; /* Space below paragraphs */
-    text-align: left; /* Left-align paragraphs for better readability */
-    max-width: 80%; /* Restrict paragraph width for better reading experience */
-    margin: 0 auto; /* Center paragraphs within container */
+    color: #ffffff;
+    font-size: 1rem; /* Smaller base font size for paragraphs on desktop */
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    text-align: left;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 /* Heading Class */
 .heading {
     text-align: center;
-    font-size: 2.2rem; /* Larger font size for desktop specific headings */
+    font-size: 1.8rem; /* Smaller font size for desktop specific headings */
     color: #ffffff;
-    font-weight: 700; /* Bold text */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for better readability */
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     text-transform: uppercase;
-    margin-bottom: 1rem; /* Space below the heading */
+    margin-bottom: 1rem;
 }
 
 /* Logo */
@@ -92,47 +92,47 @@ body {
     background-image: url("../images/newback.webp");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; /* Prevent tiling */
+    background-repeat: no-repeat;
 }
 
 /* Input Fields */
 input[type="date"],
 #birthPlace,
 #birthTime {
-    padding: 12px; /* Increased padding for better usability */
-    margin: 12px 0; /* Adjusted margin */
+    padding: 10px; /* Adjusted padding for better usability */
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    max-width: 100%; /* Full width for better responsiveness */
-    background-color: #ffffff; /* Light background for input fields */
-    color: #000000; /* Dark text for readability */
-    font-size: 1rem; /* Consistent font size */
+    max-width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 0.9rem; /* Smaller font size for input fields */
 }
 
 /* Form Container */
 form#birthDetailsForm {
-    background-color: #160e6d; /* Darker background for the form */
+    background-color: #160e6d;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Button Styles */
 button {
-    padding: 12px 24px;
+    padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    background-color: #0e0986; /* Button background color */
+    background-color: #0e0986;
     color: #ffffff;
     cursor: pointer;
-    margin-top: 10px; /* Increased margin for spacing */
-    font-size: 1rem; /* Font size for buttons */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    margin-top: 10px;
+    font-size: 0.9rem; /* Smaller font size for buttons */
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0dc3e7; /* Button hover color */
+    background-color: #0dc3e7;
 }
 
 /* Cursor Animation */
@@ -150,14 +150,14 @@ button:hover {
 #result, #horoscope, #numerology, #birthChart {
     margin-top: 20px;
     padding: 15px;
-    background-color: #160e6d; /* Background color for result box */
+    background-color: #160e6d;
     border-radius: 10px;
-    font-size: 1.1rem; /* Consistent font size for results on desktop */
-    color: #ffffff; /* Text color for results */
-    text-align: left; /* Align text left for readability */
-    max-width: 90%; /* Restrict text width for better reading experience */
-    margin: 10px auto; /* Center results within container */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+    font-size: 1rem; /* Smaller font size for results on desktop */
+    color: #ffffff;
+    text-align: left;
+    max-width: 90%;
+    margin: 10px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Zodiac Image Styles */
@@ -176,15 +176,15 @@ button:hover {
 }
 
 .music-controls button {
-    padding: 10px 20px;
+    padding: 8px 16px;
     border: none;
     border-radius: 5px;
     background-color: #0e0986;
     color: #ffffff;
     cursor: pointer;
     margin: 5px;
-    font-size: 1rem; /* Font size for control buttons */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    font-size: 0.9rem; /* Smaller font size for control buttons */
+    transition: background-color 0.3s;
 }
 
 .music-controls button:hover {
@@ -196,81 +196,81 @@ footer {
     text-align: center;
     border-top: 3px solid #130707;
     background-color: #091c5d;
-    padding: 15px 20px; /* Increased padding for better spacing */
+    padding: 15px 20px;
     width: 100%;
-    font-size: 14px; /* Font size for footer */
-    color: #ffffff; /* Text color for footer */
+    font-size: 12px; /* Smaller font size for footer */
+    color: #ffffff;
     position: relative;
     bottom: 0;
     left: 0;
-    margin-top: auto; /* Push footer to the bottom of the container */
+    margin-top: auto;
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    justify-content: center;
+    align-items: center;
 }
 
 /* Media Queries */
 /* Styles for screens smaller than or equal to 1024px */
 @media screen and (max-width: 1024px) {
     body {
-        font-size: 16px; /* Adjusted font size for tablets */
+        font-size: 14px; /* Adjusted font size for tablets */
     }
 
     .container {
-        width: 95%; /* Increased width for better mobile fit */
-        padding: 15px; /* Adjusted padding */
+        width: 95%;
+        padding: 15px;
     }
 
     h1 {
-        font-size: 2.4rem; /* Adjusted heading size for tablets */
+        font-size: 2rem; /* Adjusted heading size for tablets */
     }
 
     h2 {
-        font-size: 2rem; /* Adjusted sub-heading size for tablets */
+        font-size: 1.6rem; /* Adjusted sub-heading size for tablets */
     }
 
     p, #result, #horoscope, #numerology, #birthChart {
-        font-size: 1rem; /* Adjusted font size for tablet text */
+        font-size: 0.9rem; /* Smaller font size for tablet text */
     }
 
     input[type="date"],
     #birthPlace,
     #birthTime {
         max-width: 100%;
-        font-size: 0.9rem; /* Adjusted font size for input fields on tablets */
+        font-size: 0.8rem; /* Smaller font size for input fields on tablets */
     }
 
     footer {
-        font-size: 12px; /* Adjusted font size for tablet footer */
+        font-size: 10px; /* Smaller font size for tablet footer */
     }
 }
 
 /* Styles for screens smaller than or equal to 600px */
 @media screen and (max-width: 600px) {
     body {
-        font-size: 14px; /* Smaller font size for mobile */
+        font-size: 12px; /* Smaller font size for mobile */
     }
 
     h1 {
-        font-size: 2rem; /* Adjusted heading size for mobile */
+        font-size: 1.8rem; /* Adjusted heading size for mobile */
     }
 
     h2 {
-        font-size: 1.8rem; /* Adjusted sub-heading size for mobile */
+        font-size: 1.4rem; /* Adjusted sub-heading size for mobile */
     }
 
     p, #result, #horoscope, #numerology, #birthChart {
-        font-size: 0.9rem; /* Smaller font size for mobile text */
+        font-size: 0.8rem; /* Smaller font size for mobile text */
     }
 
     input[type="date"],
     #birthPlace,
     #birthTime {
         max-width: 100%;
-        font-size: 0.8rem; /* Smaller font size for input fields on mobile */
+        font-size: 0.7rem; /* Smaller font size for input fields on mobile */
     }
 
     footer {
-        font-size: 10px; /* Smaller font size for mobile footer */
+        font-size: 9px; /* Smaller font size for mobile footer */
     }
 }

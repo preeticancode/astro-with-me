@@ -46,11 +46,7 @@ function getZodiacNumerologyAndBirthChart() {
     img.alt = zodiacSign;
     imageContainer.appendChild(img);
 
-    // Optionally start the music here if you want it to play when results are displayed
-    const backgroundMusic = document.getElementById('backgroundMusic');
-    backgroundMusic.play();
-
-    // Trigger fireworks effect
+    // Optionally trigger fireworks effect
     fireworkEffect();
 }
 
@@ -206,48 +202,10 @@ function setupMusicControls() {
 // Call setupMusicControls function when the page loads
 window.onload = () => {
     setupMusicControls();
-};
-
-// Function to handle music playback controls
-function setupMusicControls() {
-    const backgroundMusic = document.getElementById('backgroundMusic');
-    const playButton = document.getElementById('playMusic');
-    const pauseButton = document.getElementById('pauseMusic');
-
-    // Play music when the play button is clicked
-    playButton.addEventListener('click', () => {
-        backgroundMusic.play();
-    });
-
-    // Pause music when the pause button is clicked
-    pauseButton.addEventListener('click', () => {
-        backgroundMusic.pause();
-    });
-}
-
-// Function to handle music playback controls
-function setupMusicControls() {
-    const backgroundMusic = document.getElementById('backgroundMusic');
-    const playButton = document.getElementById('playMusic');
-    const pauseButton = document.getElementById('pauseMusic');
-
-    // Play music when the play button is clicked
-    playButton.addEventListener('click', () => {
-        backgroundMusic.play();
-    });
-
-    // Pause music when the pause button is clicked
-    pauseButton.addEventListener('click', () => {
-        backgroundMusic.pause();
-    });
-}
-
-// Call setupMusicControls function when the page loads
-window.onload = () => {
-    setupMusicControls();
     setupQuiz();
 };
 
+// Quiz setup and handling
 const quizData = [
     {
         question: "Which element do you feel most connected to?",

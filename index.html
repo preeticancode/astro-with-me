@@ -1,23 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Meta tags for search engines -->
-    <meta name="description"
-    content="sign, zodiac, astrology, birthday. future, numerology, horoscope  and astro">
-<meta name="keywords" content="sign, zodiac, astrology, birthday, future, astro, numerology, horoscope">
-    <!-- font awesome and google fonts -->
+    
+    <!-- Meta tags for search engines -->
+    <meta name="description" content="Sign, zodiac, astrology, birthday, future, numerology, horoscope, and astro">
+    <meta name="keywords" content="sign, zodiac, astrology, birthday, future, astro, numerology, horoscope">
+    
+    <!-- Font Awesome and Google Fonts -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+    
     <!-- Favicon -->
     <link href="assets/favicon/favicon.ico" rel="icon" type="image/x-icon">
+    
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
-     <!-- Title -->
+    
+    <!-- Title -->
     <title>Astro With Me</title>
 </head>
 
@@ -27,39 +30,51 @@
         <h1>Astro With Me</h1>
         <p id="zodiac"></p>
     </header>
+
     <!-- Main Heading -->
-    <h1 class="heading"><img class="logo" src="assets/images/logo.webp" alt="graphic logo of Astro with me">Free Zodiac Sign, Horoscope, Numerology and Birth Chart</h1>
+    <h1 class="heading">
+        <img class="logo" src="assets/images/logo.webp" alt="graphic logo of Astro with me">
+        Free Zodiac Sign, Horoscope, Numerology, and Birth Chart
+    </h1>
+
     <!-- Input Form and Result Display -->
     <div class="container">
         <h2>"Discover Your True Self in the Stars"</h2>
-    <form id="birthDetailsForm">
-        <label for="birthdate">Birthdate:</label>
-        <input type="date" id="birthdate" required>
-        <br>
-        <label for="birthTime">Time of Birth:</label>
-        <input type="time" id="birthTime">
-        <br>
-        <label for="birthPlace">Place of Birth:</label>
-        <input type="text" id="birthPlace" placeholder="Enter city or region">
-        <br>
-        <button type="button" onclick="getZodiacNumerologyAndBirthChart()" id="animated">Calculate</button>
-    </form>
-
-    <div id="result"></div>
-    <div id="horoscope"></div>
-    <div id="numerology"></div>
-    <div id="birthChart"></div>
-    <div id="zodiacImage"></div>
-
+        
+        <!-- Form to capture user input -->
+        <form id="birthDetailsForm">
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" id="birthdate" required>
+            <br>
+            
+            <label for="birthTime">Time of Birth:</label>
+            <input type="time" id="birthTime">
+            <br>
+            
+            <label for="birthPlace">Place of Birth:</label>
+            <input type="text" id="birthPlace" placeholder="Enter city or region">
+            <br>
+            
+            <button type="button" onclick="getZodiacNumerologyAndBirthChart()" id="animated">Calculate</button>
+        </form>
+        
+        <!-- Sections to display results -->
+        <div id="result"></div>
+        <div id="horoscope"></div>
+        <div id="numerology"></div>
+        <div id="birthChart"></div>
+        <div id="zodiacImage"></div>
     </div>
-<!-- footer -->
-<footer class="footer">
-        <p><i class="fa-regular fa-copyright"></i>Made By Preeti 2024. All rights reserved.</p>
-</footer>
-<!-- External Scripts Font Awesome Kit -->
-<script src="https://kit.fontawesome.com/49f8c5c44f.js" crossorigin="anonymous"></script>
-<!-- javascript -->
-<script src="assets/js/script.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p><i class="fa-regular fa-copyright"></i> Made By Preeti 2024. All rights reserved.</p>
+    </footer>
+
+    <!-- External Scripts -->
+    <script src="https://kit.fontawesome.com/49f8c5c44f.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 </body>
 
 </html>

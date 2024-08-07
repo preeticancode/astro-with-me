@@ -1,11 +1,11 @@
-/* --------- Global style */
+/* --------- Global Style */
 body, html {
     font-family: Arial, sans-serif;
     margin: 0;
     width: 100%;
     background-color: #f0f8ff;
     text-align: center;
-    color: #ffffff; /* Set a default text color */
+    color: #ffffff; /* Default text color */
     overflow-x: hidden; /* Prevent horizontal scroll */
     min-height: 100vh; /* Ensure the body covers the full height of the viewport */
     display: flex;
@@ -30,12 +30,12 @@ header {
     border-bottom: 3px solid black;
     background-color: #091c5d;
     padding: 10px;
-    width: 100%; /* Make the header full width */
+    width: 100%; /* Full width */
     box-sizing: border-box; /* Include padding and borders in the element's total width */
-    margin: 0; /* Remove automatic margins */
+    margin: 0; /* Remove default margin */
 }
 
-/* --------- Heading */
+/* --------- Heading Styles */
 p, h1, h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: italic;
@@ -58,7 +58,7 @@ p, h1, h2 {
     padding-right: 5px;
 }
 
-/* --------- Background image */
+/* --------- Background Image */
 body {
     background-image: url("../images/newback.webp");
     background-size: cover;
@@ -93,7 +93,7 @@ button:hover {
     background-color: #0dc3e7;
 }
 
-/* --------- Cursor animation */
+/* --------- Cursor Animation */
 #animated {
     animation-name: move;
     animation-duration: 5s;
@@ -104,7 +104,7 @@ button:hover {
            url("http://downloads.totallyfreecursors.com/thumbnails/gold_star.gif"), auto;
 }
 
-/* --------- Result */
+/* --------- Result Display */
 #result, #horoscope, #numerology, #birthChart {
     margin-top: 10px;
     font-size: 1em;
@@ -134,10 +134,10 @@ footer {
 }
 
 /* --------- Media Queries */
+/* Styles for screens smaller than or equal to 1024px */
 @media screen and (max-width: 1024px) {
     body {
         font-size: 14px;
-        overflow-x: hidden;
     }
 
     .container {
@@ -152,6 +152,7 @@ footer {
     }
 }
 
+/* Styles for screens larger than 1024px */
 @media screen and (min-width: 1025px) {
     body {
         font-size: 16px;

@@ -8,3 +8,7 @@ This page is dedicated to dedicated to astrology, likely offering users informat
 
 ***
 ***(By Preeti Singh)***
+
+## [Link to Live Website](https://preeticancode.github.io/preeti-project2/)
+
+![Am I responsive screenshot](docs/screenshots/am-i-responsive.png)

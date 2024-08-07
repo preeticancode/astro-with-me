@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Meta tags for search engines -->
+    <!-- Meta tags for SEO -->
     <meta name="description" content="Explore your zodiac sign, horoscope, numerology, and birth chart with Astro With Me. Uncover insights about your future and personal traits.">
     <meta name="keywords" content="zodiac, horoscope, numerology, birth chart, astrology, future, personal insights">
     
     <!-- Font Awesome and Google Fonts -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" 
+          crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Righteous" rel="stylesheet">
     
     <!-- Favicon -->
@@ -20,7 +21,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     
-    <!-- Title -->
+    <!-- Page Title -->
     <title>Astro With Me</title>
 </head>
 
@@ -31,7 +32,7 @@
         <p id="zodiac"></p>
     </header>
 
-    <!--Main Heading and Input Form and Result Display -->
+    <!-- Main Content Container -->
     <div class="container">
         <h1 class="heading">
             <img class="logo" src="assets/images/logo.webp" alt="Astro With Me logo">
@@ -63,35 +64,35 @@
         <div id="zodiacImage"></div>
     </div>
 
-  <!-- HTML for Name Input and Quiz Start Button -->
-<div id="nameEntry" class="container">
-    <h1 class="heading">
-        <img class="logo" src="assets/images/logo.webp" alt="Astro With Me logo">
-        Astro With Me Quiz
-    </h1>
-    <label for="userName">Enter Your Name To Start The Astrology Quiz:</label>
-    <input type="text" id="userName" class="input-field" placeholder="Your name" required>
-    <button id="startQuiz" class="button">Start Quiz</button>
-</div>
+    <!-- Name Input and Quiz Start Button -->
+    <div id="nameEntry" class="container">
+        <h1 class="heading">
+            <img class="logo" src="assets/images/logo.webp" alt="Astro With Me logo">
+            Astro With Me Quiz
+        </h1>
+        <label for="userName">Enter Your Name To Start The Astrology Quiz:</label>
+        <input type="text" id="userName" class="input-field" placeholder="Your name" required>
+        <button id="startQuiz" class="button">Start Quiz</button>
+    </div>
 
-<!-- Quiz Container -->
-<div id="quizContainer" class="container" style="display: none;">
-    <div id="quiz"></div>
-    <button id="submitQuiz" class="button">Submit Answer</button>
-    <div id="quizResult"></div>
-</div>
+    <!-- Quiz Container -->
+    <div id="quizContainer" class="container" style="display: none;">
+        <div id="quiz"></div>
+        <button id="submitQuiz" class="button">Submit Answer</button>
+        <div id="quizResult"></div>
+    </div>
 
-    <!-- Music controls -->
+    <!-- Music Controls -->
     <div class="music-controls">
         <button id="playMusic">Play Music</button>
         <button id="pauseMusic">Pause Music</button>
     </div>
 
-    <!-- Audio element -->
+    <!-- Audio Element -->
     <audio id="backgroundMusic" src="assets/music/background.mp3" preload="auto"></audio>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <p><i class="fa-regular fa-copyright"></i> Crafted with care by Preeti, 2024. All rights reserved.</p>
     </footer>
 

@@ -306,7 +306,6 @@ document.getElementById('submitQuiz').addEventListener('click', () => {
     
     if (answer) {
         answersCount[answer.value]++;
-        
         currentQuiz++;
         
         if (currentQuiz < quizData.length) {

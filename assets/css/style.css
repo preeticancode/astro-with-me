@@ -1,11 +1,11 @@
-/* Global Style */
+/* Global Styles */
 body, html {
     font-family: 'Arial', sans-serif;
     margin: 0;
     width: 100%;
     background-color: #f0f8ff;
     text-align: center;
-    color: #000000; /* Good contrast */
+    color: #000000; /* Good contrast for readability */
     overflow-x: hidden;
     min-height: 100vh;
     display: flex;
@@ -14,7 +14,15 @@ body, html {
     line-height: 1.6;
 }
 
-/* Ensure the main content fills the available space */
+/* Background Image */
+body {
+    background-image: url("../images/newback.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Container Styling */
 .container {
     background-color: #4b0082; /* Indigo background for good contrast */
     width: 90%;
@@ -86,14 +94,6 @@ p {
 .logo {
     height: 40px;
     padding-right: 5px;
-}
-
-/* Background Image */
-body {
-    background-image: url("../images/newback.webp");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
 
 /* Input Fields */
@@ -200,14 +200,28 @@ button:hover {
     background-color: #0dc3e7; /* Ensure hover state maintains good contrast */
 }
 
-/* Quiz Result */
+/* Quiz Question Styling */
+.quiz-question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Quiz Answers Styling */
+#quiz label {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Quiz Result Styling */
 #quizResult {
     margin-top: 20px;
     font-size: 1rem;
     color: #ffffff;
+    font-weight: bold;
 }
 
-/* Styles for Music Control Buttons */
+/* Music Control Styles */
 .music-controls {
     margin: 20px 0;
     text-align: center;
@@ -247,68 +261,8 @@ footer {
     align-items: center;
 }
 
-/* quiz style */
-
-/* Basic Container Styling */
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #4b0082;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-    color: #ffffff;
-}
-
-/* Input Field Styling */
-.input-field {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: #000000;
-}
-
-/* Button Styling */
-.button {
-    background-color: #0e0986;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #091c5d; /* Ensure hover state maintains good contrast */
-}
-
-/* Quiz Question Styling */
-.quiz-question {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-/* Quiz Answers Styling */
-#quiz label {
-    display: block;
-    margin: 10px 0;
-    font-size: 16px;
-}
-
-/* Quiz Result Styling */
-#quizResult {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
 /* Media Queries */
+
 /* Styles for screens smaller than or equal to 1024px */
 @media screen and (max-width: 1024px) {
     body {

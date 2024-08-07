@@ -66,13 +66,19 @@
         <div id="zodiacImage"></div>
     </div>
 
-    <div class="quiz-container">
-        <h2>Astrology Quiz</h2>
-        <div id="quiz"></div>
-        <button id="submitQuiz" class="quiz-button">Submit Answers</button>
-        <div id="quizResult"></div>
-    </div>
-    
+  <!-- HTML for Name Input and Quiz Start Button -->
+<div id="nameEntry" class="container">
+    <label for="userName">Enter Your Name To Start The Astrology Quiz:</label>
+    <input type="text" id="userName" class="input-field" placeholder="Your name" required>
+    <button id="startQuiz" class="button">Start Quiz</button>
+</div>
+
+<!-- Quiz Container -->
+<div id="quizContainer" class="container" style="display: none;">
+    <div id="quiz"></div>
+    <button id="submitQuiz" class="button">Submit Answer</button>
+    <div id="quizResult"></div>
+</div>
 
     <!-- Music controls -->
     <div class="music-controls">

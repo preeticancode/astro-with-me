@@ -208,7 +208,46 @@ window.onload = () => {
     setupMusicControls();
 };
 
-// Quiz Questions and Answers
+// Function to handle music playback controls
+function setupMusicControls() {
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    const playButton = document.getElementById('playMusic');
+    const pauseButton = document.getElementById('pauseMusic');
+
+    // Play music when the play button is clicked
+    playButton.addEventListener('click', () => {
+        backgroundMusic.play();
+    });
+
+    // Pause music when the pause button is clicked
+    pauseButton.addEventListener('click', () => {
+        backgroundMusic.pause();
+    });
+}
+
+// Function to handle music playback controls
+function setupMusicControls() {
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    const playButton = document.getElementById('playMusic');
+    const pauseButton = document.getElementById('pauseMusic');
+
+    // Play music when the play button is clicked
+    playButton.addEventListener('click', () => {
+        backgroundMusic.play();
+    });
+
+    // Pause music when the pause button is clicked
+    pauseButton.addEventListener('click', () => {
+        backgroundMusic.pause();
+    });
+}
+
+// Call setupMusicControls function when the page loads
+window.onload = () => {
+    setupMusicControls();
+    setupQuiz();
+};
+
 const quizData = [
     {
         question: "Which element do you feel most connected to?",
@@ -255,16 +294,32 @@ const personalityResults = {
     d: "You are free-spirited and value your independence. You are always seeking new experiences and are open to change."
 };
 
-const quizContainer = document.getElementById('quiz');
-const quizResultContainer = document.getElementById('quizResult');
-const submitQuizButton = document.getElementById('submitQuiz');
-
 let currentQuiz = 0;
 let answersCount = { a: 0, b: 0, c: 0, d: 0 };
 
-// Load Quiz
+// Setup the quiz: handle name entry and quiz start
+function setupQuiz() {
+    const startQuizButton = document.getElementById('startQuiz');
+    const userNameInput = document.getElementById('userName');
+    const quizContainer = document.getElementById('quizContainer');
+    const nameEntryContainer = document.getElementById('nameEntry');
+
+    startQuizButton.addEventListener('click', () => {
+        const userName = userNameInput.value.trim();
+        if (userName) {
+            nameEntryContainer.style.display = 'none';
+            quizContainer.style.display = 'block';
+            loadQuiz();
+        } else {
+            alert('Please enter your name to start the quiz.');
+        }
+    });
+}
+
+// Load the quiz questions
 function loadQuiz() {
     const currentQuizData = quizData[currentQuiz];
+    const quizContainer = document.getElementById('quiz');
     
     quizContainer.innerHTML = `
         <div class="quiz-question">${currentQuizData.question}</div>
@@ -287,11 +342,8 @@ function loadQuiz() {
     `;
 }
 
-// Load the first quiz question
-loadQuiz();
-
 // Handle quiz submission
-submitQuizButton.addEventListener('click', () => {
+document.getElementById('submitQuiz').addEventListener('click', () => {
     const answer = document.querySelector('input[name="answer"]:checked');
     
     if (answer) {
@@ -308,9 +360,9 @@ submitQuizButton.addEventListener('click', () => {
             );
             
             // Display the personality result based on the most selected answer
-            quizResultContainer.innerHTML = `<p>${personalityResults[highestAnswer]}</p>`;
-            quizContainer.innerHTML = ''; // Clear quiz questions
-            submitQuizButton.style.display = 'none'; // Hide submit button
+            document.getElementById('quizResult').innerHTML = `<p>${personalityResults[highestAnswer]}</p>`;
+            document.getElementById('quiz').innerHTML = ''; // Clear quiz questions
+            document.getElementById('submitQuiz').style.display = 'none'; // Hide submit button
         }
     } else {
         alert('Please select an answer before proceeding.');

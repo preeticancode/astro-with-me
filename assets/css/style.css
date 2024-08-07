@@ -5,7 +5,7 @@ body, html {
     width: 100%;
     background-color: #f0f8ff;
     text-align: center;
-    color: #ffffff;
+    color: #000000; /* Good contrast */
     overflow-x: hidden;
     min-height: 100vh;
     display: flex;
@@ -16,7 +16,7 @@ body, html {
 
 /* Ensure the main content fills the available space */
 .container {
-    background-color: #9631de;
+    background-color: #4b0082; /* Indigo background for good contrast */
     width: 90%;
     max-width: 830px;
     margin: 20px auto;
@@ -35,6 +35,7 @@ header {
     width: 100%;
     box-sizing: border-box;
     margin: 0;
+    color: #ffffff; /* Ensure text in header has good contrast */
 }
 
 /* Heading Styles */
@@ -45,14 +46,14 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 2.2rem; /* Smaller font size for desktop main headings */
+    font-size: 2.2rem;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     text-transform: uppercase;
 }
 
 h2 {
-    font-size: 1.8rem; /* Smaller font size for desktop sub-headings */
+    font-size: 1.8rem;
     font-weight: 600;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
     margin-bottom: 0.5rem;
@@ -62,7 +63,7 @@ h2 {
 p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #ffffff;
-    font-size: 1rem; /* Smaller base font size for paragraphs on desktop */
+    font-size: 1rem;
     line-height: 1.7;
     margin-bottom: 1rem;
     text-align: left;
@@ -73,7 +74,7 @@ p {
 /* Heading Class */
 .heading {
     text-align: center;
-    font-size: 1.8rem; /* Smaller font size for desktop specific headings */
+    font-size: 1.8rem;
     color: #ffffff;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
@@ -99,23 +100,24 @@ body {
 input[type="date"],
 #birthPlace,
 #birthTime {
-    padding: 10px; /* Adjusted padding for better usability */
+    padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     max-width: 100%;
     background-color: #ffffff;
     color: #000000;
-    font-size: 0.9rem; /* Smaller font size for input fields */
+    font-size: 0.9rem;
 }
 
 /* Form Container */
 form#birthDetailsForm {
-    background-color: #5a287e;
+    background-color: #091c5d;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: #ffffff; /* Ensure text in form has good contrast */
 }
 
 /* Button Styles */
@@ -123,7 +125,7 @@ button {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    background-color: #ff7f50; 
+    background-color: #0e0986;
     color: #ffffff;
     cursor: pointer;
     margin-top: 10px;
@@ -132,7 +134,7 @@ button {
 }
 
 button:hover {
-    background-color: #d35400; /* Slightly darker orange for hover state */
+    background-color: #0dc3e7; /* Ensure hover state maintains good contrast */
 }
 
 /* Cursor Animation */
@@ -150,9 +152,9 @@ button:hover {
 #result, #horoscope, #numerology, #birthChart {
     margin-top: 20px;
     padding: 15px;
-    background-color: #5a287e;
+    background-color: #091c5d;
     border-radius: 10px;
-    font-size: 1rem; /* Smaller font size for results on desktop */
+    font-size: 1rem;
     color: #ffffff;
     text-align: left;
     max-width: 90%;
@@ -171,7 +173,7 @@ button:hover {
 
 /* Quiz Container */
 .quiz-container {
-    background-color: #4b0082; /* Indigo background */
+    background-color: #4b0082;
     width: 90%;
     max-width: 800px;
     margin: 20px auto;
@@ -186,7 +188,7 @@ button:hover {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    background-color: #ff7f50;
+    background-color: #0e0986;
     color: #ffffff;
     cursor: pointer;
     font-size: 0.9rem;
@@ -195,7 +197,7 @@ button:hover {
 }
 
 .quiz-button:hover {
-    background-color: #d35400; /* Darker orange on hover */
+    background-color: #0dc3e7; /* Ensure hover state maintains good contrast */
 }
 
 /* Quiz Result */
@@ -219,12 +221,12 @@ button:hover {
     color: #ffffff;
     cursor: pointer;
     margin: 5px;
-    font-size: 0.9rem; /* Smaller font size for control buttons */
+    font-size: 0.9rem;
     transition: background-color 0.3s;
 }
 
 .music-controls button:hover {
-    background-color: #0dc3e7;
+    background-color: #0dc3e7; /* Ensure hover state maintains good contrast */
 }
 
 /* Footer */
@@ -234,7 +236,7 @@ footer {
     background-color: #091c5d;
     padding: 15px 20px;
     width: 100%;
-    font-size: 12px; /* Smaller font size for footer */
+    font-size: 12px;
     color: #ffffff;
     position: relative;
     bottom: 0;
@@ -245,11 +247,72 @@ footer {
     align-items: center;
 }
 
+/* quiz style */
+
+/* Basic Container Styling */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #4b0082;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Input Field Styling */
+.input-field {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Button Styling */
+.button {
+    background-color: #0e0986;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #091c5d; /* Ensure hover state maintains good contrast */
+}
+
+/* Quiz Question Styling */
+.quiz-question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Quiz Answers Styling */
+#quiz label {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Quiz Result Styling */
+#quizResult {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 /* Media Queries */
 /* Styles for screens smaller than or equal to 1024px */
 @media screen and (max-width: 1024px) {
     body {
-        font-size: 14px; /* Adjusted font size for tablets */
+        font-size: 14px;
     }
 
     .container {
@@ -258,55 +321,55 @@ footer {
     }
 
     h1 {
-        font-size: 2rem; /* Adjusted heading size for tablets */
+        font-size: 2rem;
     }
 
     h2 {
-        font-size: 1.6rem; /* Adjusted sub-heading size for tablets */
+        font-size: 1.6rem;
     }
 
     p, #result, #horoscope, #numerology, #birthChart {
-        font-size: 0.9rem; /* Smaller font size for tablet text */
+        font-size: 0.9rem;
     }
 
     input[type="date"],
     #birthPlace,
     #birthTime {
         max-width: 100%;
-        font-size: 0.8rem; /* Smaller font size for input fields on tablets */
+        font-size: 0.8rem;
     }
 
     footer {
-        font-size: 10px; /* Smaller font size for tablet footer */
+        font-size: 10px;
     }
 }
 
 /* Styles for screens smaller than or equal to 600px */
 @media screen and (max-width: 600px) {
     body {
-        font-size: 12px; /* Smaller font size for mobile */
+        font-size: 12px;
     }
 
     h1 {
-        font-size: 1.8rem; /* Adjusted heading size for mobile */
+        font-size: 1.8rem;
     }
 
     h2 {
-        font-size: 1.4rem; /* Adjusted sub-heading size for mobile */
+        font-size: 1.4rem;
     }
 
     p, #result, #horoscope, #numerology, #birthChart {
-        font-size: 0.8rem; /* Smaller font size for mobile text */
+        font-size: 0.8rem;
     }
 
     input[type="date"],
     #birthPlace,
     #birthTime {
         max-width: 100%;
-        font-size: 0.7rem; /* Smaller font size for input fields on mobile */
+        font-size: 0.7rem;
     }
 
     footer {
-        font-size: 9px; /* Smaller font size for mobile footer */
+        font-size: 9px;
     }
 }

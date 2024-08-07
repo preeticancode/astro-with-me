@@ -326,3 +326,87 @@ document.getElementById('submitQuiz').addEventListener('click', () => {
     }
 });
 
+// Function to get zodiac, numerology, and birth chart details
+function getZodiacNumerologyAndBirthChart() {
+    const birthdate = document.getElementById('birthdate').value;
+    const birthTime = document.getElementById('birthTime').value;
+    const birthPlace = document.getElementById('birthPlace').value;
+
+    if (!birthdate) {
+        alert('Please enter your birth date');
+        return;
+    }
+
+    if (!birthTime) {
+        alert('Please enter your time of birth');
+        return;
+    }
+
+    // Converts the birthdate string into a JavaScript Date object to extract day, month, and year
+    const date = new Date(birthdate);
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+
+    // Parse the birth time into hours and minutes
+    const timeParts = birthTime.split(":");
+    const hours = parseInt(timeParts[0]);
+    const minutes = parseInt(timeParts[1]);
+
+    // Calculate zodiac sign, horoscope, image URL, numerology, and birth chart
+    const zodiacSign = determineZodiacSign(day, month);
+    const horoscope = getHoroscope(zodiacSign);
+    const imageUrl = getZodiacImage(zodiacSign);
+    const numerologyNumber = calculateNumerology(day, month, year);
+    const numerologyReading = getNumerologyReading(numerologyNumber);
+    const birthChart = calculateBirthChart(day, month, year, hours, minutes);
+
+    // Display results in HTML elements
+    document.getElementById('result').innerText = `Your Zodiac Sign is: ${zodiacSign}`;
+    document.getElementById('horoscope').innerText = `Horoscope: ${horoscope}`;
+    document.getElementById('numerology').innerText = `Your Numerology Number is: ${numerologyNumber}. ${numerologyReading}`;
+    document.getElementById('birthChart').innerText = `Your Birth Chart:\nSun Sign: ${birthChart.sunSign}\nMoon Sign: ${birthChart.moonSign}\nRising Sign: ${birthChart.risingSign}`;
+
+    // Display zodiac image
+    const imageContainer = document.getElementById('zodiacImage');
+    imageContainer.innerHTML = '';  
+    const img = document.createElement('img');
+    img.src = imageUrl;
+    img.alt = zodiacSign;
+    imageContainer.appendChild(img);
+
+    // Show result container
+    document.getElementById('resultContainer').style.display = 'block';
+
+    // Optionally trigger fireworks effect
+    fireworkEffect();
+}
+
+// Other functions remain the same
+
+// Function to handle music playback controls
+function setupMusicControls() {
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    const playButton = document.getElementById('playMusic');
+    const pauseButton = document.getElementById('pauseMusic');
+
+    if (playButton) {
+        playButton.addEventListener('click', () => {
+            backgroundMusic.play();
+        });
+    }
+
+    if (pauseButton) {
+        pauseButton.addEventListener('click', () => {
+            backgroundMusic.pause();
+        });
+    }
+}
+
+// Call setupMusicControls function when the page loads
+window.onload = () => {
+    setupMusicControls();
+    setupQuiz();
+};
+
+// Quiz setup and handling code remains the same

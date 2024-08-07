@@ -172,6 +172,12 @@ function fireworkEffect() {
     });
 }
 
+window.onload = () => {
+    setMaxDate();
+    setupMusicControls();
+    setupQuiz();
+};
+
 // Function to handle music playback controls
 function setupMusicControls() {
     const backgroundMusic = document.getElementById('backgroundMusic');

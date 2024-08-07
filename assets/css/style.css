@@ -3,32 +3,33 @@ body, html {
     font-family: Arial, sans-serif;
     margin: 0;
     width: 100%;
-    background-color: #f0f8ff;
+    background-color: #f0f8ff; /* Light background for good contrast */
     text-align: center;
-    color: #ffffff; /* Default text color */
+    color: #ffffff; /* Default text color for better contrast */
     overflow-x: hidden; /* Prevent horizontal scroll */
     min-height: 100vh; /* Ensure the body covers the full height of the viewport */
     display: flex;
     flex-direction: column;
+    font-size: 16px; /* Base font size */
 }
 
 /* Ensure the main content fills the available space */
 .container {
-    background-color: #9631de;
+    background-color: #9631de; /* Main content background */
     width: 85%;
     max-width: 830px;
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
-    color: #ffffff;
+    color: #ffffff; /* Text color in the container */
     overflow: hidden;
     flex: 1; /* Allow the container to grow and fill available space */
 }
 
 /* --------- Header */
 header {
-    border-bottom: 3px solid black;
-    background-color: #091c5d;
+    border-bottom: 3px solid #ffffff; /* Change border color to white for contrast */
+    background-color: #091c5d; /* Darker background for header */
     padding: 10px;
     width: 100%; /* Full width */
     box-sizing: border-box; /* Include padding and borders in the element's total width */
@@ -36,20 +37,38 @@ header {
 }
 
 /* --------- Heading Styles */
-p, h1, h2 {
+h1, h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-style: italic;
-    font-weight: 300;
-    color: #ffffff;
+    color: #ffffff; /* Consistent heading color */
 }
 
+h1 {
+    font-size: 2.5rem; /* Larger font size for main headings */
+    font-weight: 700; /* Bolder weight for main headings */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for better readability */
+    text-transform: uppercase; /* Consistent heading style */
+}
+
+h2 {
+    font-size: 2rem; /* Slightly smaller font size for sub-headings */
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Shadow for better readability */
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffffff; /* Paragraph text color */
+    font-size: 1rem; /* Base font size for paragraphs */
+    line-height: 1.5; /* Improved readability with line-height */
+}
+
+/* Heading Class */
 .heading {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2rem; /* Font size for specific headings */
     color: #ffffff;
-    font-weight: bolder;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    text-decoration-color: blueviolet;
+    font-weight: 700; /* Bold text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for better readability */
     text-transform: uppercase;
 }
 
@@ -63,20 +82,21 @@ body {
     background-image: url("../images/newback.webp");
     background-size: cover;
     background-position: center;
-    background-repeat: repeat;
+    background-repeat: no-repeat; /* Prevent tiling */
 }
 
 /* --------- Input Fields */
 input[type="date"],
 #birthPlace,
 #birthTime {
-    padding: 5px;
-    margin: 5px 0;
+    padding: 10px; /* Increased padding for better usability */
+    margin: 10px 0; /* Adjusted margin */
     border: 1px solid #ccc;
     border-radius: 5px;
-    max-width: 200px;
-    background-color: #ffffff;
-    color: #000000;
+    max-width: 100%; /* Full width for better responsiveness */
+    background-color: #ffffff; /* Light background for input fields */
+    color: #000000; /* Dark text for readability */
+    font-size: 1rem; /* Consistent font size */
 }
 
 /* Button Styles */
@@ -84,14 +104,15 @@ button {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    background-color: #160e6d;
-    color: white;
+    background-color: #160e6d; /* Button background color */
+    color: #ffffff;
     cursor: pointer;
-    margin-top: 5px;
+    margin-top: 10px; /* Increased margin for spacing */
+    font-size: 1rem; /* Font size for buttons */
 }
 
 button:hover {
-    background-color: #0dc3e7;
+    background-color: #0dc3e7; /* Button hover color */
 }
 
 /* --------- Cursor Animation */
@@ -108,10 +129,11 @@ button:hover {
 /* --------- Result Display */
 #result, #horoscope, #numerology, #birthChart {
     margin-top: 10px;
-    font-size: 1em;
-    color: #ffffff;
+    font-size: 1rem; /* Consistent font size for results */
+    color: #ffffff; /* Text color for results */
 }
 
+/* Zodiac Image Styles */
 #zodiacImage img {
     margin-top: 3px;
     width: 80px;
@@ -120,7 +142,7 @@ button:hover {
     max-width: 100%;
 }
 
-/* Styles for music control buttons */
+/* Styles for Music Control Buttons */
 .music-controls {
     margin: 20px 0;
     text-align: center;
@@ -134,6 +156,7 @@ button:hover {
     color: #ffffff;
     cursor: pointer;
     margin: 5px;
+    font-size: 1rem; /* Font size for control buttons */
 }
 
 .music-controls button:hover {
@@ -143,24 +166,24 @@ button:hover {
 /* --------- Footer */
 footer {
     text-align: center;
-    border-top: 3px solid black;
+    border-top: 3px solid #ffffff; /* Change border color to white for contrast */
     background-color: #091c5d;
-    padding: 5px;
+    padding: 10px;
     width: 100%;
-    font-size: 14px;
-    color: #ffffff;
+    font-size: 14px; /* Font size for footer */
+    color: #ffffff; /* Text color for footer */
 }
 
 /* --------- Media Queries */
 /* Styles for screens smaller than or equal to 1024px */
 @media screen and (max-width: 1024px) {
     body {
-        font-size: 14px;
+        font-size: 14px; /* Adjusted font size for smaller screens */
     }
 
     .container {
         width: 90%;
-        padding: 20px;
+        padding: 15px; /* Adjusted padding */
     }
 
     input[type="date"],
@@ -173,7 +196,7 @@ footer {
 /* Styles for screens larger than 1024px */
 @media screen and (min-width: 1025px) {
     body {
-        font-size: 16px;
+        font-size: 16px; /* Default font size for larger screens */
     }
 
     .container {

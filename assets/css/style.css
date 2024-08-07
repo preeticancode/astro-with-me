@@ -1,4 +1,4 @@
-/* --------- Global Style */
+/* Global Style */
 body, html {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -10,7 +10,7 @@ body, html {
     min-height: 100vh; /* Ensure the body covers the full height of the viewport */
     display: flex;
     flex-direction: column;
-    font-size: 16px; /* Base font size */
+    font-size: 18px; /* Default font size for desktop */
     line-height: 1.6; /* Improved readability */
 }
 
@@ -19,7 +19,7 @@ body, html {
     background-color: #9631de; /* Main content background */
     width: 90%; /* Increased width for better mobile fit */
     max-width: 830px;
-    margin: 0 auto;
+    margin: 20px auto; /* Add margin to separate from other content */
     padding: 20px;
     border-radius: 10px;
     color: #ffffff; /* Text color in the container */
@@ -27,7 +27,7 @@ body, html {
     flex: 1; /* Allow the container to grow and fill available space */
 }
 
-/* --------- Header */
+/* Header */
 header {
     border-bottom: 3px solid #130707; 
     background-color: #091c5d; /* Darker background for header */
@@ -37,7 +37,7 @@ header {
     margin: 0; /* Remove default margin */
 }
 
-/* --------- Heading Styles */
+/* Heading Styles */
 h1, h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #ffffff; /* Consistent heading color */
@@ -45,14 +45,14 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 2.5rem; /* Larger font size for main headings */
+    font-size: 2.8rem; /* Larger font size for desktop main headings */
     font-weight: 700; /* Bolder weight for main headings */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for better readability */
     text-transform: uppercase; /* Consistent heading style */
 }
 
 h2 {
-    font-size: 2rem; /* Slightly smaller font size for sub-headings */
+    font-size: 2.2rem; /* Slightly smaller font size for desktop sub-headings */
     font-weight: 600;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Shadow for better readability */
     margin-bottom: 0.5rem; /* Space below the sub-headings */
@@ -62,8 +62,8 @@ h2 {
 p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #ffffff; /* Paragraph text color */
-    font-size: 1rem; /* Base font size for paragraphs */
-    line-height: 1.6; /* Improved readability with line-height */
+    font-size: 1.1rem; /* Base font size for paragraphs on desktop */
+    line-height: 1.7; /* Improved readability with line-height */
     margin-bottom: 1rem; /* Space below paragraphs */
     text-align: left; /* Left-align paragraphs for better readability */
     max-width: 80%; /* Restrict paragraph width for better reading experience */
@@ -73,7 +73,7 @@ p {
 /* Heading Class */
 .heading {
     text-align: center;
-    font-size: 2rem; /* Font size for specific headings */
+    font-size: 2.2rem; /* Larger font size for desktop specific headings */
     color: #ffffff;
     font-weight: 700; /* Bold text */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for better readability */
@@ -87,7 +87,7 @@ p {
     padding-right: 5px;
 }
 
-/* --------- Background Image */
+/* Background Image */
 body {
     background-image: url("../images/newback.webp");
     background-size: cover;
@@ -95,7 +95,7 @@ body {
     background-repeat: no-repeat; /* Prevent tiling */
 }
 
-/* --------- Input Fields */
+/* Input Fields */
 input[type="date"],
 #birthPlace,
 #birthTime {
@@ -109,12 +109,21 @@ input[type="date"],
     font-size: 1rem; /* Consistent font size */
 }
 
+/* Form Container */
+form#birthDetailsForm {
+    background-color: #160e6d; /* Darker background for the form */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+}
+
 /* Button Styles */
 button {
     padding: 12px 24px;
     border: none;
     border-radius: 10px;
-    background-color: #160e6d; /* Button background color */
+    background-color: #0e0986; /* Button background color */
     color: #ffffff;
     cursor: pointer;
     margin-top: 10px; /* Increased margin for spacing */
@@ -126,7 +135,7 @@ button:hover {
     background-color: #0dc3e7; /* Button hover color */
 }
 
-/* --------- Cursor Animation */
+/* Cursor Animation */
 #animated {
     animation-name: move;
     animation-duration: 5s;
@@ -137,19 +146,23 @@ button:hover {
            url("http://downloads.totallyfreecursors.com/thumbnails/gold_star.gif"), auto;
 }
 
-/* --------- Result Display */
+/* Result Display */
 #result, #horoscope, #numerology, #birthChart {
-    margin-top: 10px;
-    font-size: 1rem; /* Consistent font size for results */
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #160e6d; /* Background color for result box */
+    border-radius: 10px;
+    font-size: 1.1rem; /* Consistent font size for results on desktop */
     color: #ffffff; /* Text color for results */
     text-align: left; /* Align text left for readability */
-    max-width: 80%; /* Restrict text width for better reading experience */
-    margin: 0 auto; /* Center results within container */
+    max-width: 90%; /* Restrict text width for better reading experience */
+    margin: 10px auto; /* Center results within container */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
 }
 
 /* Zodiac Image Styles */
 #zodiacImage img {
-    margin-top: 3px;
+    margin-top: 20px;
     width: 80px;
     height: 80px;
     object-fit: contain;
@@ -166,7 +179,7 @@ button:hover {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #160e6d;
+    background-color: #0e0986;
     color: #ffffff;
     cursor: pointer;
     margin: 5px;
@@ -178,7 +191,7 @@ button:hover {
     background-color: #0dc3e7;
 }
 
-/* --------- Footer */
+/* Footer */
 footer {
     text-align: center;
     border-top: 3px solid #130707;
@@ -196,11 +209,11 @@ footer {
     align-items: center; /* Center content vertically */
 }
 
-/* --------- Media Queries */
+/* Media Queries */
 /* Styles for screens smaller than or equal to 1024px */
 @media screen and (max-width: 1024px) {
     body {
-        font-size: 14px; /* Adjusted font size for smaller screens */
+        font-size: 16px; /* Adjusted font size for tablets */
     }
 
     .container {
@@ -208,28 +221,56 @@ footer {
         padding: 15px; /* Adjusted padding */
     }
 
+    h1 {
+        font-size: 2.4rem; /* Adjusted heading size for tablets */
+    }
+
+    h2 {
+        font-size: 2rem; /* Adjusted sub-heading size for tablets */
+    }
+
+    p, #result, #horoscope, #numerology, #birthChart {
+        font-size: 1rem; /* Adjusted font size for tablet text */
+    }
+
     input[type="date"],
     #birthPlace,
     #birthTime {
         max-width: 100%;
-        font-size: 0.9rem; /* Slightly smaller font size for inputs on mobile */
+        font-size: 0.9rem; /* Adjusted font size for input fields on tablets */
     }
 
-    button {
-        font-size: 0.9rem; /* Slightly smaller font size for buttons on mobile */
+    footer {
+        font-size: 12px; /* Adjusted font size for tablet footer */
     }
 }
 
-/* Styles for screens larger than 1024px */
-@media screen and (min-width: 1025px) {
+/* Styles for screens smaller than or equal to 600px */
+@media screen and (max-width: 600px) {
     body {
-        font-size: 16px; /* Default font size for larger screens */
+        font-size: 14px; /* Smaller font size for mobile */
     }
 
-    .container {
-        width: 70%;
-        max-width: 830px;
-        padding: 20px;
-        margin: 0 auto;
+    h1 {
+        font-size: 2rem; /* Adjusted heading size for mobile */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Adjusted sub-heading size for mobile */
+    }
+
+    p, #result, #horoscope, #numerology, #birthChart {
+        font-size: 0.9rem; /* Smaller font size for mobile text */
+    }
+
+    input[type="date"],
+    #birthPlace,
+    #birthTime {
+        max-width: 100%;
+        font-size: 0.8rem; /* Smaller font size for input fields on mobile */
+    }
+
+    footer {
+        font-size: 10px; /* Smaller font size for mobile footer */
     }
 }

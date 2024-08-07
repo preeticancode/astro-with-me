@@ -32,7 +32,6 @@ body {
     border-radius: 10px;
     color: #ffffff;
     overflow: hidden;
-    flex: 1;
 }
 
 /* Header */
@@ -115,9 +114,12 @@ form#birthDetailsForm {
     background-color: #091c5d;
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin: 20px auto;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     color: #ffffff; /* Ensure text in form has good contrast */
+    width: 90%; /* Ensure the form takes up 90% of the container width */
+    max-width: 600px; /* Max width for larger screens */
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 /* Button Styles */
@@ -134,7 +136,7 @@ button {
 }
 
 button:hover {
-    background-color: #0dc3e7; /* Ensure hover state maintains good contrast */
+    background-color: #0dc3e7; 
 }
 
 /* Cursor Animation */
@@ -197,7 +199,7 @@ button:hover {
 }
 
 .quiz-button:hover {
-    background-color: #0dc3e7; /* Ensure hover state maintains good contrast */
+    background-color: #0dc3e7; 
 }
 
 /* Quiz Question Styling */
@@ -240,7 +242,7 @@ button:hover {
 }
 
 .music-controls button:hover {
-    background-color: #0dc3e7; /* Ensure hover state maintains good contrast */
+    background-color: #0dc3e7; 
 }
 
 /* Footer */
@@ -325,5 +327,12 @@ footer {
 
     footer {
         font-size: 9px;
+    }
+
+    /* Additional styles for centering the form on small screens */
+    form#birthDetailsForm {
+        width: 95%; 
+        max-width: 100%; /* Avoid form exceeding the viewport width */
+        margin: 10px auto; /* Center the form horizontally */
     }
 }

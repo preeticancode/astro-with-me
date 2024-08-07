@@ -325,3 +325,4 @@ document.getElementById('submitQuiz').addEventListener('click', () => {
         alert('Please select an answer before proceeding.');
     }
 });
+

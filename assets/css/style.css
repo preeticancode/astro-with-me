@@ -23,7 +23,7 @@ body {
 }
 
 /* Container Styling */
-.container {
+.container, #quizContainer {
     background-color: #4b0082; /* Indigo background for good contrast */
     width: 90%;
     max-width: 830px;
@@ -33,6 +33,15 @@ body {
     color: #ffffff;
     overflow: hidden;
     flex-grow: 1; /* Allow container to take up remaining space */
+}
+
+/* Center the quiz container */
+#quizContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    max-width: 800px;
+    margin: 20px auto; /* Center the container horizontally */
 }
 
 /* Header */
@@ -123,7 +132,7 @@ form#birthDetailsForm {
 }
 
 /* Button Styles */
-button {
+button, #submitQuiz, #returnQuiz {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
@@ -136,8 +145,15 @@ button {
     display: inline-block; /* Ensure button is inline block for centering */
 }
 
-button:hover {
+button:hover, #submitQuiz:hover, #returnQuiz:hover {
     background-color: #0dc3e7; 
+}
+
+#returnQuiz {
+    display: block;
+    margin: 20px auto;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
 /* Cursor Animation */
@@ -172,40 +188,6 @@ button:hover {
     height: 80px;
     object-fit: contain;
     max-width: 100%;
-}
-
-/* Quiz Container */
-#quizContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    background-color: #4b0082;
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    color: #ffffff;
-    flex-grow: 1; /* Allow quiz container to take up remaining space */
-}
-
-/* Quiz Button */
-#submitQuiz {
-    background-color: #0e0986;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.3s;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    margin-top: 10px;
-    text-align: center;
-    display: inline-block; /* Ensure button behaves as an inline-block for centering */
-}
-
-#submitQuiz:hover {
-    background-color: #0dc3e7; 
 }
 
 /* Quiz Result Styling */
@@ -256,24 +238,6 @@ footer {
     box-sizing: border-box; /* Include padding in element's width and height */
 }
 
-/* To center the "Return to Quiz" button */
-#returnQuiz {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #091c5d;
-    color: white;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-#returnQuiz:hover {
-    background-color: #0dc3e7;
-}
-
 /* Media Queries */
 
 /* Styles for screens smaller than or equal to 1024px */
@@ -282,7 +246,7 @@ footer {
         font-size: 14px;
     }
 
-    .container {
+    .container, #quizContainer {
         width: 95%;
         padding: 15px;
     }
@@ -347,4 +311,22 @@ footer {
         max-width: 100%; /* Avoid form exceeding the viewport width */
         margin: 10px auto; /* Center the form horizontally */
     }
+}
+
+/* Quiz Elements Styling */
+#quiz, .quiz-question {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Quiz Option Styling */
+.quizData {
+    text-align: left; /* Align options text to the left */
+    margin: 5px 0; /* Add some spacing between options */
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 1rem;
 }

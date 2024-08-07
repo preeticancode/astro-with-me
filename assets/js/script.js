@@ -127,152 +127,97 @@ function getNumerologyReading(number) {
         1: "You are a leader with strong independence.",
         2: "You are diplomatic and sensitive to others.",
         3: "You are creative and enjoy expressing yourself.",
-        4: "You are practical and hardworking.",
-        5: "You crave adventure and variety.",
-        6: "You are responsible and caring.",
-        7: "You are introspective and analytical.",
-        8: "You are ambitious and focused on success.",
-        9: "You are compassionate and generous."
+        4: "You are practical and value stability.",
+        5: "You are adventurous and thrive on change.",
+        6: "You are caring and prioritize family and relationships.",
+        7: "You are introspective and enjoy deep thinking.",
+        8: "You are ambitious and focus on success.",
+        9: "You are compassionate and seek to make the world a better place."
     };
     return readings[number];
 }
 
-// Function to calculate a simplified birth chart
+// Function to calculate birth chart details
 function calculateBirthChart(day, month, year, hours, minutes) {
-    const sunSign = determineZodiacSign(day, month);
-    const moonSign = determineMoonSign(day, month, hours, minutes); // Include time in calculation
-    const risingSign = determineRisingSign(day, month, year, hours, minutes); // Include time in calculation
+    // For simplicity, this function returns hardcoded values.
+    // Real-world calculations would be based on astrological rules.
     return {
-        sunSign,
-        moonSign,
-        risingSign
+        sunSign: determineZodiacSign(day, month),
+        moonSign: "Pisces",
+        risingSign: "Libra"
     };
 }
 
-// Simplified moon sign calculation (placeholder)
-function determineMoonSign(day, month, hours, minutes) {
-    const signs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
-    const index = (day + month + Math.floor(hours / 2)) % 12;
-    return signs[index];
-}
-
-// Simplified rising sign calculation (placeholder)
-function determineRisingSign(day, month, year, hours, minutes) {
-    const signs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
-    const index = (day + month + year + hours + Math.floor(minutes / 10)) % 12;
-    return signs[index];
-}
-
-// Function to trigger fireworks effect
+// Function to play confetti/firework effect
 function fireworkEffect() {
-    confetti({
-        particleCount: 100,
-        spread: 160,
-        origin: { y: 0.6 }
-    });
+    var confettiSettings = { target: 'content' };
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
 }
 
-window.onload = () => {
-    setMaxDate();
-    setupMusicControls();
-    setupQuiz();
-};
+// Handle background music play/pause
+document.getElementById('playMusic').addEventListener('click', function () {
+    document.getElementById('backgroundMusic').play();
+});
 
-// Function to handle music playback controls
-function setupMusicControls() {
-    const backgroundMusic = document.getElementById('backgroundMusic');
-    const playButton = document.getElementById('playMusic');
-    const pauseButton = document.getElementById('pauseMusic');
+document.getElementById('pauseMusic').addEventListener('click', function () {
+    document.getElementById('backgroundMusic').pause();
+});
 
-    if (playButton) {
-        playButton.addEventListener('click', () => {
-            backgroundMusic.play();
-        });
-    }
-
-    if (pauseButton) {
-        pauseButton.addEventListener('click', () => {
-            backgroundMusic.pause();
-        });
-    }
-}
-
-// Call setupMusicControls function when the page loads
-window.onload = () => {
-    setupMusicControls();
-    setupQuiz();
-};
-
-// Quiz setup and handling
+// Personality Quiz Data
 const quizData = [
     {
-        question: "Which element do you feel most connected to?",
+        question: "What do you enjoy doing in your free time?",
         answers: {
-            a: "Fire",
-            b: "Water",
-            c: "Earth",
-            d: "Air"
+            a: "Reading a book",
+            b: "Playing sports",
+            c: "Hanging out with friends",
+            d: "Exploring nature"
         }
     },
     {
-        question: "What do you value most?",
+        question: "Which of the following is most important to you?",
         answers: {
-            a: "Passion",
-            b: "Emotions",
-            c: "Stability",
+            a: "Knowledge",
+            b: "Success",
+            c: "Relationships",
             d: "Freedom"
         }
     },
     {
-        question: "Which animal do you relate to the most?",
+        question: "How do you handle challenges?",
         answers: {
-            a: "Lion",
-            b: "Dolphin",
-            c: "Elephant",
-            d: "Eagle"
-        }
-    },
-    {
-        question: "What is your ideal weekend activity?",
-        answers: {
-            a: "Adventure sports",
-            b: "Relaxing by the water",
-            c: "Gardening",
-            d: "Exploring new places"
+            a: "Analyze and plan",
+            b: "Face them head-on",
+            c: "Seek support from others",
+            d: "Adapt and go with the flow"
         }
     }
 ];
 
 const personalityResults = {
-    a: "You have a fiery personality, full of passion and energy. You are a natural leader and love to take charge.",
-    b: "You are deeply emotional and intuitive. You have a strong connection with your inner self and those around you.",
-    c: "You are grounded and practical, valuing stability and consistency in your life. People see you as reliable and down-to-earth.",
-    d: "You are free-spirited and value your independence. You are always seeking new experiences and are open to change."
+    a: "You are thoughtful and analytical.",
+    b: "You are driven and ambitious.",
+    c: "You are social and caring.",
+    d: "You are adventurous and adaptable."
 };
 
+// Initialize quiz variables
 let currentQuiz = 0;
 let answersCount = { a: 0, b: 0, c: 0, d: 0 };
 
-// Setup the quiz: handle name entry and quiz start
-function setupQuiz() {
-    const startQuizButton = document.getElementById('startQuiz');
-    const userNameInput = document.getElementById('userName');
-    const quizContainer = document.getElementById('quizContainer');
-    const nameEntryContainer = document.getElementById('nameEntry');
-
-    if (startQuizButton) {
-        startQuizButton.addEventListener('click', () => {
-            const userName = userNameInput.value.trim();
-            if (userName) {
-                nameEntryContainer.style.display = 'none';
-                quizContainer.style.display = 'block';
-                loadQuiz();
-            } else {
-                alert('Please enter your name to start the quiz.');
-            }
-        });
+// Start the quiz
+document.getElementById('startQuiz').addEventListener('click', () => {
+    const userName = document.getElementById('userName').value;
+    
+    if (userName) {
+        document.getElementById('nameEntry').style.display = 'none';
+        document.getElementById('quizContainer').style.display = 'block';
+        loadQuiz();
+    } else {
+        alert('Please enter your name to start the quiz.');
     }
-}
+});
 
 // Load the quiz questions
 function loadQuiz() {
@@ -320,21 +265,26 @@ document.getElementById('submitQuiz').addEventListener('click', () => {
             document.getElementById('quizResult').innerHTML = `<p>${personalityResults[highestAnswer]}</p>`;
             document.getElementById('quiz').innerHTML = ''; // Clear quiz questions
             document.getElementById('submitQuiz').style.display = 'none'; // Hide submit button
+            
+            // Show the return quiz button
+            document.getElementById('returnQuiz').style.display = 'block';
         }
     } else {
         alert('Please select an answer before proceeding.');
     }
 });
 
-// Function to set the max date for the birthdate input to today
-function setMaxDate() {
-    const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
-    document.getElementById('birthdate').setAttribute('max', today);
-}
-
-// Call setMaxDate function when the page loads
-window.onload = () => {
-    setMaxDate();
-    setupMusicControls();
-    setupQuiz();
-};
+// Handle "Return to Quiz" button click
+document.getElementById('returnQuiz').addEventListener('click', () => {
+    // Reset quiz variables
+    currentQuiz = 0;
+    answersCount = { a: 0, b: 0, c: 0, d: 0 };
+    
+    // Hide result and return button, show submit button
+    document.getElementById('quizResult').innerHTML = '';
+    document.getElementById('returnQuiz').style.display = 'none';
+    document.getElementById('submitQuiz').style.display = 'block';
+    
+    // Reload the quiz
+    loadQuiz();
+});

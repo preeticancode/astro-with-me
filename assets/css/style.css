@@ -28,7 +28,7 @@ body, html {
 
 /* --------- Header */
 header {
-    border-bottom: 3px solid #ffffff; /* Change border color to white for contrast */
+    border-bottom: 3px solid #130707; 
     background-color: #091c5d; /* Darker background for header */
     padding: 10px;
     width: 100%; /* Full width */
@@ -166,7 +166,7 @@ button:hover {
 /* --------- Footer */
 footer {
     text-align: center;
-    border-top: 3px solid #ffffff; /* Change border color to white for contrast */
+    border-top: 3px solid #130707; 
     background-color: #091c5d;
     padding: 10px;
     width: 100%;

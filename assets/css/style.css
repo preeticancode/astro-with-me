@@ -1,6 +1,6 @@
 /* --------- Global Style */
 body, html {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     width: 100%;
     background-color: #f0f8ff; /* Light background for good contrast */
@@ -11,12 +11,13 @@ body, html {
     display: flex;
     flex-direction: column;
     font-size: 16px; /* Base font size */
+    line-height: 1.6; /* Improved readability */
 }
 
 /* Ensure the main content fills the available space */
 .container {
     background-color: #9631de; /* Main content background */
-    width: 85%;
+    width: 90%; /* Increased width for better mobile fit */
     max-width: 830px;
     margin: 0 auto;
     padding: 20px;
@@ -30,7 +31,7 @@ body, html {
 header {
     border-bottom: 3px solid #130707; 
     background-color: #091c5d; /* Darker background for header */
-    padding: 10px;
+    padding: 15px 20px; /* Increased padding for better spacing */
     width: 100%; /* Full width */
     box-sizing: border-box; /* Include padding and borders in the element's total width */
     margin: 0; /* Remove default margin */
@@ -40,6 +41,7 @@ header {
 h1, h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #ffffff; /* Consistent heading color */
+    margin: 0; /* Remove default margin */
 }
 
 h1 {
@@ -53,13 +55,19 @@ h2 {
     font-size: 2rem; /* Slightly smaller font size for sub-headings */
     font-weight: 600;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Shadow for better readability */
+    margin-bottom: 0.5rem; /* Space below the sub-headings */
 }
 
+/* Paragraphs */
 p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #ffffff; /* Paragraph text color */
     font-size: 1rem; /* Base font size for paragraphs */
-    line-height: 1.5; /* Improved readability with line-height */
+    line-height: 1.6; /* Improved readability with line-height */
+    margin-bottom: 1rem; /* Space below paragraphs */
+    text-align: left; /* Left-align paragraphs for better readability */
+    max-width: 80%; /* Restrict paragraph width for better reading experience */
+    margin: 0 auto; /* Center paragraphs within container */
 }
 
 /* Heading Class */
@@ -70,8 +78,10 @@ p {
     font-weight: 700; /* Bold text */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for better readability */
     text-transform: uppercase;
+    margin-bottom: 1rem; /* Space below the heading */
 }
 
+/* Logo */
 .logo {
     height: 40px;
     padding-right: 5px;
@@ -89,8 +99,8 @@ body {
 input[type="date"],
 #birthPlace,
 #birthTime {
-    padding: 10px; /* Increased padding for better usability */
-    margin: 10px 0; /* Adjusted margin */
+    padding: 12px; /* Increased padding for better usability */
+    margin: 12px 0; /* Adjusted margin */
     border: 1px solid #ccc;
     border-radius: 5px;
     max-width: 100%; /* Full width for better responsiveness */
@@ -101,7 +111,7 @@ input[type="date"],
 
 /* Button Styles */
 button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
     border-radius: 10px;
     background-color: #160e6d; /* Button background color */
@@ -109,6 +119,7 @@ button {
     cursor: pointer;
     margin-top: 10px; /* Increased margin for spacing */
     font-size: 1rem; /* Font size for buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 button:hover {
@@ -131,6 +142,9 @@ button:hover {
     margin-top: 10px;
     font-size: 1rem; /* Consistent font size for results */
     color: #ffffff; /* Text color for results */
+    text-align: left; /* Align text left for readability */
+    max-width: 80%; /* Restrict text width for better reading experience */
+    margin: 0 auto; /* Center results within container */
 }
 
 /* Zodiac Image Styles */
@@ -157,6 +171,7 @@ button:hover {
     cursor: pointer;
     margin: 5px;
     font-size: 1rem; /* Font size for control buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 .music-controls button:hover {
@@ -166,12 +181,19 @@ button:hover {
 /* --------- Footer */
 footer {
     text-align: center;
-    border-top: 3px solid #130707; 
+    border-top: 3px solid #130707;
     background-color: #091c5d;
-    padding: 10px;
+    padding: 15px 20px; /* Increased padding for better spacing */
     width: 100%;
     font-size: 14px; /* Font size for footer */
     color: #ffffff; /* Text color for footer */
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: auto; /* Push footer to the bottom of the container */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
 /* --------- Media Queries */
@@ -182,7 +204,7 @@ footer {
     }
 
     .container {
-        width: 90%;
+        width: 95%; /* Increased width for better mobile fit */
         padding: 15px; /* Adjusted padding */
     }
 
@@ -190,6 +212,11 @@ footer {
     #birthPlace,
     #birthTime {
         max-width: 100%;
+        font-size: 0.9rem; /* Slightly smaller font size for inputs on mobile */
+    }
+
+    button {
+        font-size: 0.9rem; /* Slightly smaller font size for buttons on mobile */
     }
 }
 

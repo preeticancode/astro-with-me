@@ -1,7 +1,7 @@
 // Function to get zodiac, numerology, and birth chart details
 function getZodiacNumerologyAndBirthChart() {
     const birthdate = document.getElementById('birthdate').value;
-    const birthTime = document.getElementById('birthTime').value; // Get time of birth
+    const birthTime = document.getElementById('birthTime').value;
 
     if (!birthdate) {
         alert('Please enter your birth date');
@@ -30,7 +30,7 @@ function getZodiacNumerologyAndBirthChart() {
     const imageUrl = getZodiacImage(zodiacSign);
     const numerologyNumber = calculateNumerology(day, month, year);
     const numerologyReading = getNumerologyReading(numerologyNumber);
-    const birthChart = calculateBirthChart(day, month, year, hours, minutes); // Pass time of birth
+    const birthChart = calculateBirthChart(day, month, year, hours, minutes);
 
     // Display results in HTML elements
     document.getElementById('result').innerText = `Your Zodiac Sign is: ${zodiacSign}`;
@@ -46,37 +46,27 @@ function getZodiacNumerologyAndBirthChart() {
     img.alt = zodiacSign;
     imageContainer.appendChild(img);
 
+    // Show result container
+    document.getElementById('resultContainer').style.display = 'block';
+
     // Optionally trigger fireworks effect
     fireworkEffect();
 }
 
 // Function to determine zodiac sign based on day and month
 function determineZodiacSign(day, month) {
-    if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) {
-        return "Aquarius";
-    } else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
-        return "Pisces";
-    } else if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) {
-        return "Aries";
-    } else if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) {
-        return "Taurus";
-    } else if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) {
-        return "Gemini";
-    } else if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) {
-        return "Cancer";
-    } else if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) {
-        return "Leo";
-    } else if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) {
-        return "Virgo";
-    } else if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) {
-        return "Libra";
-    } else if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) {
-        return "Scorpio";
-    } else if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) {
-        return "Sagittarius";
-    } else if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) {
-        return "Capricorn";
-    }
+    if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) return "Aquarius";
+    if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) return "Pisces";
+    if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) return "Aries";
+    if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) return "Taurus";
+    if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) return "Gemini";
+    if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) return "Cancer";
+    if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) return "Leo";
+    if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) return "Virgo";
+    if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) return "Libra";
+    if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) return "Scorpio";
+    if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) return "Sagittarius";
+    if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) return "Capricorn";
 }
 
 // Function to get horoscope message for a given zodiac sign
@@ -188,15 +178,17 @@ function setupMusicControls() {
     const playButton = document.getElementById('playMusic');
     const pauseButton = document.getElementById('pauseMusic');
 
-    // Play music when the play button is clicked
-    playButton.addEventListener('click', () => {
-        backgroundMusic.play();
-    });
+    if (playButton) {
+        playButton.addEventListener('click', () => {
+            backgroundMusic.play();
+        });
+    }
 
-    // Pause music when the pause button is clicked
-    pauseButton.addEventListener('click', () => {
-        backgroundMusic.pause();
-    });
+    if (pauseButton) {
+        pauseButton.addEventListener('click', () => {
+            backgroundMusic.pause();
+        });
+    }
 }
 
 // Call setupMusicControls function when the page loads
@@ -262,16 +254,18 @@ function setupQuiz() {
     const quizContainer = document.getElementById('quizContainer');
     const nameEntryContainer = document.getElementById('nameEntry');
 
-    startQuizButton.addEventListener('click', () => {
-        const userName = userNameInput.value.trim();
-        if (userName) {
-            nameEntryContainer.style.display = 'none';
-            quizContainer.style.display = 'block';
-            loadQuiz();
-        } else {
-            alert('Please enter your name to start the quiz.');
-        }
-    });
+    if (startQuizButton) {
+        startQuizButton.addEventListener('click', () => {
+            const userName = userNameInput.value.trim();
+            if (userName) {
+                nameEntryContainer.style.display = 'none';
+                quizContainer.style.display = 'block';
+                loadQuiz();
+            } else {
+                alert('Please enter your name to start the quiz.');
+            }
+        });
+    }
 }
 
 // Load the quiz questions
@@ -325,88 +319,3 @@ document.getElementById('submitQuiz').addEventListener('click', () => {
         alert('Please select an answer before proceeding.');
     }
 });
-
-// Function to get zodiac, numerology, and birth chart details
-function getZodiacNumerologyAndBirthChart() {
-    const birthdate = document.getElementById('birthdate').value;
-    const birthTime = document.getElementById('birthTime').value;
-    const birthPlace = document.getElementById('birthPlace').value;
-
-    if (!birthdate) {
-        alert('Please enter your birth date');
-        return;
-    }
-
-    if (!birthTime) {
-        alert('Please enter your time of birth');
-        return;
-    }
-
-    // Converts the birthdate string into a JavaScript Date object to extract day, month, and year
-    const date = new Date(birthdate);
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-
-    // Parse the birth time into hours and minutes
-    const timeParts = birthTime.split(":");
-    const hours = parseInt(timeParts[0]);
-    const minutes = parseInt(timeParts[1]);
-
-    // Calculate zodiac sign, horoscope, image URL, numerology, and birth chart
-    const zodiacSign = determineZodiacSign(day, month);
-    const horoscope = getHoroscope(zodiacSign);
-    const imageUrl = getZodiacImage(zodiacSign);
-    const numerologyNumber = calculateNumerology(day, month, year);
-    const numerologyReading = getNumerologyReading(numerologyNumber);
-    const birthChart = calculateBirthChart(day, month, year, hours, minutes);
-
-    // Display results in HTML elements
-    document.getElementById('result').innerText = `Your Zodiac Sign is: ${zodiacSign}`;
-    document.getElementById('horoscope').innerText = `Horoscope: ${horoscope}`;
-    document.getElementById('numerology').innerText = `Your Numerology Number is: ${numerologyNumber}. ${numerologyReading}`;
-    document.getElementById('birthChart').innerText = `Your Birth Chart:\nSun Sign: ${birthChart.sunSign}\nMoon Sign: ${birthChart.moonSign}\nRising Sign: ${birthChart.risingSign}`;
-
-    // Display zodiac image
-    const imageContainer = document.getElementById('zodiacImage');
-    imageContainer.innerHTML = '';  
-    const img = document.createElement('img');
-    img.src = imageUrl;
-    img.alt = zodiacSign;
-    imageContainer.appendChild(img);
-
-    // Show result container
-    document.getElementById('resultContainer').style.display = 'block';
-
-    // Optionally trigger fireworks effect
-    fireworkEffect();
-}
-
-// Other functions remain the same
-
-// Function to handle music playback controls
-function setupMusicControls() {
-    const backgroundMusic = document.getElementById('backgroundMusic');
-    const playButton = document.getElementById('playMusic');
-    const pauseButton = document.getElementById('pauseMusic');
-
-    if (playButton) {
-        playButton.addEventListener('click', () => {
-            backgroundMusic.play();
-        });
-    }
-
-    if (pauseButton) {
-        pauseButton.addEventListener('click', () => {
-            backgroundMusic.pause();
-        });
-    }
-}
-
-// Call setupMusicControls function when the page loads
-window.onload = () => {
-    setupMusicControls();
-    setupQuiz();
-};
-
-// Quiz setup and handling code remains the same

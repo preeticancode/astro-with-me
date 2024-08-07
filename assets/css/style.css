@@ -92,7 +92,7 @@ body {
     background-image: url("../images/newback.webp");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* Input Fields */
@@ -111,7 +111,7 @@ input[type="date"],
 
 /* Form Container */
 form#birthDetailsForm {
-    background-color: #160e6d;
+    background-color: #5a287e;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -123,7 +123,7 @@ button {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    background-color: #9631de; 
+    background-color: #ff7f50; 
     color: #ffffff;
     cursor: pointer;
     margin-top: 10px;
@@ -150,7 +150,7 @@ button:hover {
 #result, #horoscope, #numerology, #birthChart {
     margin-top: 20px;
     padding: 15px;
-    background-color: #160e6d;
+    background-color: #5a287e;
     border-radius: 10px;
     font-size: 1rem; /* Smaller font size for results on desktop */
     color: #ffffff;
@@ -167,6 +167,42 @@ button:hover {
     height: 80px;
     object-fit: contain;
     max-width: 100%;
+}
+
+/* Quiz Container */
+.quiz-container {
+    background-color: #4b0082; /* Indigo background */
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: left;
+}
+
+/* Quiz Button */
+.quiz-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff7f50;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.quiz-button:hover {
+    background-color: #d35400; /* Darker orange on hover */
+}
+
+/* Quiz Result */
+#quizResult {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #ffffff;
 }
 
 /* Styles for Music Control Buttons */

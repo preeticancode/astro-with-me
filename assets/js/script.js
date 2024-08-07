@@ -207,3 +207,112 @@ function setupMusicControls() {
 window.onload = () => {
     setupMusicControls();
 };
+
+// Quiz Questions and Answers
+const quizData = [
+    {
+        question: "Which element do you feel most connected to?",
+        answers: {
+            a: "Fire",
+            b: "Water",
+            c: "Earth",
+            d: "Air"
+        }
+    },
+    {
+        question: "What do you value most?",
+        answers: {
+            a: "Passion",
+            b: "Emotions",
+            c: "Stability",
+            d: "Freedom"
+        }
+    },
+    {
+        question: "Which animal do you relate to the most?",
+        answers: {
+            a: "Lion",
+            b: "Dolphin",
+            c: "Elephant",
+            d: "Eagle"
+        }
+    },
+    {
+        question: "What is your ideal weekend activity?",
+        answers: {
+            a: "Adventure sports",
+            b: "Relaxing by the water",
+            c: "Gardening",
+            d: "Exploring new places"
+        }
+    }
+];
+
+const personalityResults = {
+    a: "You have a fiery personality, full of passion and energy. You are a natural leader and love to take charge.",
+    b: "You are deeply emotional and intuitive. You have a strong connection with your inner self and those around you.",
+    c: "You are grounded and practical, valuing stability and consistency in your life. People see you as reliable and down-to-earth.",
+    d: "You are free-spirited and value your independence. You are always seeking new experiences and are open to change."
+};
+
+const quizContainer = document.getElementById('quiz');
+const quizResultContainer = document.getElementById('quizResult');
+const submitQuizButton = document.getElementById('submitQuiz');
+
+let currentQuiz = 0;
+let answersCount = { a: 0, b: 0, c: 0, d: 0 };
+
+// Load Quiz
+function loadQuiz() {
+    const currentQuizData = quizData[currentQuiz];
+    
+    quizContainer.innerHTML = `
+        <div class="quiz-question">${currentQuizData.question}</div>
+        <label>
+            <input type="radio" name="answer" value="a">
+            ${currentQuizData.answers.a}
+        </label><br>
+        <label>
+            <input type="radio" name="answer" value="b">
+            ${currentQuizData.answers.b}
+        </label><br>
+        <label>
+            <input type="radio" name="answer" value="c">
+            ${currentQuizData.answers.c}
+        </label><br>
+        <label>
+            <input type="radio" name="answer" value="d">
+            ${currentQuizData.answers.d}
+        </label>
+    `;
+}
+
+// Load the first quiz question
+loadQuiz();
+
+// Handle quiz submission
+submitQuizButton.addEventListener('click', () => {
+    const answer = document.querySelector('input[name="answer"]:checked');
+    
+    if (answer) {
+        answersCount[answer.value]++;
+        
+        currentQuiz++;
+        
+        if (currentQuiz < quizData.length) {
+            loadQuiz();
+        } else {
+            // Determine the most selected answer
+            let highestAnswer = Object.keys(answersCount).reduce((a, b) => 
+                answersCount[a] > answersCount[b] ? a : b
+            );
+            
+            // Display the personality result based on the most selected answer
+            quizResultContainer.innerHTML = `<p>${personalityResults[highestAnswer]}</p>`;
+            quizContainer.innerHTML = ''; // Clear quiz questions
+            submitQuizButton.style.display = 'none'; // Hide submit button
+        }
+    } else {
+        alert('Please select an answer before proceeding.');
+    }
+});

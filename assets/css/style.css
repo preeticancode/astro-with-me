@@ -238,6 +238,246 @@ footer {
     box-sizing: border-box; /* Include padding in element's width and height */
 }
 
+/* Global Styles */
+body, html {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    width: 100%;
+    background-color: #f0f8ff;
+    color: #000000; /* Good contrast for readability */
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px; /* Default font size for desktop */
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Background Image */
+body {
+    background-image: url("../images/newback.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Container Styling */
+.container, #quizContainer {
+    background-color: #4b0082; /* Indigo background for good contrast */
+    width: 90%;
+    max-width: 830px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    overflow: hidden;
+    flex-grow: 1; /* Allow container to take up remaining space */
+}
+
+/* Center the quiz container */
+#quizContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    max-width: 800px;
+    margin: 20px auto; /* Center the container horizontally */
+}
+
+/* Header */
+header {
+    border-bottom: 3px solid #130707; 
+    background-color: #091c5d;
+    padding: 15px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #ffffff; /* Ensure text in header has good contrast */
+}
+
+/* Heading Styles */
+h1, h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    text-align: left;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Heading Class */
+.heading {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+/* Logo */
+.logo {
+    height: 40px;
+    padding-right: 5px;
+}
+
+/* Input Fields */
+input[type="date"],
+#birthPlace,
+#birthTime {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 0.9rem;
+}
+
+/* Form Container */
+form#birthDetailsForm {
+    background-color: #091c5d;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: #ffffff; /* Ensure text in form has good contrast */
+    width: 90%; /* Ensure the form takes up 90% of the container width */
+    max-width: 600px; /* Max width for larger screens */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Button Styles */
+button, #submitQuiz, #returnQuiz {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0e0986;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    display: inline-block; /* Ensure button is inline block for centering */
+}
+
+button:hover, #submitQuiz:hover, #returnQuiz:hover {
+    background-color: #0dc3e7; 
+}
+
+#returnQuiz {
+    display: block;
+    margin: 20px auto;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Cursor Animation */
+#animated {
+    animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    cursor: url("http://downloads.totallyfreecursors.com/cursor_files/gold_star.ani"), 
+           url("http://downloads.totallyfreecursors.com/thumbnails/gold_star.gif"), auto;
+}
+
+/* Result Display */
+#result, #horoscope, #numerology, #birthChart {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #091c5d;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: left;
+    max-width: 90%;
+    margin: 10px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Zodiac Image Styles */
+#zodiacImage img {
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+/* Quiz Result Styling */
+#quizResult {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Music Control Styles */
+.music-controls {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.music-controls button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4b0082;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.music-controls button:hover {
+    background-color: #0dc3e7; 
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    border-top: 3px solid #130707;
+    background-color: #091c5d;
+    padding: 15px 20px;
+    width: 100%;
+    font-size: 12px;
+    color: #ffffff;
+    margin-top: auto; /* Push footer to bottom of the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* Prevent footer from shrinking */
+    box-sizing: border-box; /* Include padding in element's width and height */
+}
+
 /* Media Queries */
 
 /* Styles for screens smaller than or equal to 1024px */
@@ -266,7 +506,6 @@ footer {
     input[type="date"],
     #birthPlace,
     #birthTime {
-        max-width: 100%;
         font-size: 0.8rem;
     }
 
@@ -296,7 +535,6 @@ footer {
     input[type="date"],
     #birthPlace,
     #birthTime {
-        max-width: 100%;
         font-size: 0.7rem;
     }
 
@@ -304,6 +542,39 @@ footer {
         font-size: 9px;
         padding: 10px 15px;
     }
+
+    /* Adjust container width and form styling for small screens */
+    .container, #quizContainer {
+        width: 95%;
+        padding: 15px;
+        box-sizing: border-box; /* Ensure padding is included in width */
+    }
+
+    form#birthDetailsForm {
+        width: 100%; /* Make form take up full width of its container */
+        max-width: 100%; /* Ensure form does not exceed viewport width */
+        margin: 10px auto; /* Center the form horizontally */
+    }
+}
+
+/* Quiz Elements Styling */
+#quiz, .quiz-question {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Quiz Option Styling */
+.quizData {
+    text-align: left; /* Align options text to the left */
+    margin: 5px 0; /* Add some spacing between options */
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 1rem;
+}
+
 
     /* Additional styles for centering the form on small screens */
     form#birthDetailsForm {

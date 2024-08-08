@@ -9,7 +9,7 @@ This page is dedicated to dedicated to astrology, likely offering users informat
 ***
 ***(By Preeti Singh)***
 
-## [Link to Live Website](https://preeticancode.github.io/preeti-project2/)
+## [Link to Live Website](https://preeticancode.github.io/astro-with-me/)
 
 ![Am I responsive screenshot](docs/screenshots/am-i-responsive.png)
 
@@ -35,7 +35,9 @@ This page is dedicated to dedicated to astrology, likely offering users informat
 5. [**Future-Enhancements**](#future-enhancements)
 6. [**Testing Phase**](#testing-phase)
 7. [**Deployment**](#deployment)
-8. [**Credits**](#credits)
+8. [**Forking the GitHub Repository**](#forking-the-gitHub-repository)
+9. [**Local Clone**](#local-clone)
+10. [**Credits**](#credits)
     * [**Frameworks, Libraries & Programs Used**](#Frameworks-Libraries-&-Programs-Used)
     * [**Content**](#content)
     * [**Media**](#media)
@@ -250,7 +252,7 @@ I have included details of testing both during development and post development 
 ## **Deployment**
 The site was deployed to GitHub pages. The steps taken to deploy are as follows:
 1. Log in to [Github](https://github.com/)
-2. Navigate to [preeticancode/hike-with-me](https://github.com/preeticancode/HIKE-WITH.gitME) in  
+2. Navigate to [preeticancode/astro-with-me](https://github.com/preeticancode/astro-with-me) in  
    the list of repositories
 3. In the GitHub repository, navigate to the [Settings] tab
 4. In Settings scroll down to [GitHub pages] which opens in a new page.
@@ -258,7 +260,23 @@ The site was deployed to GitHub pages. The steps taken to deploy are as follows:
 6. Once the master branch has been selected, the page is automatically refreshed and a display indicates the successful deployment and the link to the address.
 
 The link to the live website is here:
-https://preeticancode.github.io/hike-with-me/
+https://preeticancode.github.io/astro-with-me/
+
+## **Forking the GitHub Repositoryt**
+By forking the repository, we make a copy of the original repository on our GitHub account to view and change without affecting the original repository by using these steps:
+
+1. Log in to GitHub and locate [GitHub Repository capital-cities](https://github.com/preeticancode/astro-with-me)
+2. At the top of the Repository(under the main navigation) locate "Fork" button.
+3. Now you should have a copy of the original repository in your GitHub account.
+
+## **Local Clone**
+1. Log in to GitHub and locate [GitHub Repository capital-cities](https://github.com/preeticancode/astro-with-me)
+2. Under the repository name click "Clone or download"
+3. Click on the code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone` and then paste The URL copied in the step 3.
+7. Press Enter and your local clone will be created.
 ***
 
 ## **Credits**

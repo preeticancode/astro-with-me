@@ -262,7 +262,7 @@ The site was deployed to GitHub pages. The steps taken to deploy are as follows:
 The link to the live website is here:
 https://preeticancode.github.io/astro-with-me/
 
-## **Forking the GitHub Repositoryt**
+## **Forking the GitHub Repository**
 By forking the repository, we make a copy of the original repository on our GitHub account to view and change without affecting the original repository by using these steps:
 
 1. Log in to GitHub and locate [GitHub Repository capital-cities](https://github.com/preeticancode/astro-with-me)
@@ -309,17 +309,17 @@ Am I Responsive? To show the website image on a range of devices.
 ### **Content**
 All content was written by myself and fewtext for the Home page was taken google article.
 
-Form contents and footer code used on main page taken from Love Running Project.
-
 The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 
 Accessibility checker - [WAVE - Web accessibility evaluation tool](https://wave.webaim.org/)
 
-The golden gradient colour scheme - [brandgradients.com](http://www.brandgradients.com/gold-gradient).
+The Confetti is taken from [JSDelivr](https://www.jsdelivr.com/)
+
+The animated cursor is taken from [Free Cursors](https://totallyfreecursors.com/)
   
 
 ### **Media**
-The photos used on the home and sign up page are from our group hiking trip and some are mine.
+The photos used on the background is from [Freepik](https://www.freepik.com/).
 
 The some images used for the gallery page were taken from open source site (pixabay).
 
@@ -330,19 +330,16 @@ Color grid contract tool - [Eightshapes](https://contrast-grid.eightshapes.com/)
 
 ### **Honorable mentions**
 I would like to take the opportunity to thank:
-- My mentor David Bowers for his feedback, advice, guidance and support.
+- My mentor Mitko Bachvarov for his feedback, advice, guidance and support. Also David Bowers for helping.
 - My husband Rajesh for his support, advice, help with testing, and for giving me some kids free 
   time to work on my project.
 - To the lovely people on the Code Institute Slack for providing peer code reviews.
-- My friends and community memebers who are part of HIKE WITH ME.
 ***
 
 ### **References**
 Code institute Learning Materials
 
-Code Institute Walkthrough projec: Love Running.
-
-My Mentors Project : Modern Buddhism
+Code Institute Walkthrough projec: Love Maths
 ***
 
 

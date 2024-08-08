@@ -6,7 +6,7 @@
   * [**Validators**](#validators)
       * [*HTML*](#html---httpsvalidatorw3orgnu)
       * [*CSS*](#css---httpsjigsaww3orgcss-validator)
-      * [*JS*](#JS---https://jshint.com/-validator)
+      * [*JS*](#JS---https://jshint.com)
   * [**Lighthouse Scores**](#lighthouse-scores)
       * [*Mobile Version*](#mobile-version)
       * [*Desktop Version:*](#desktop-version)

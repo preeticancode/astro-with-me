@@ -134,34 +134,12 @@ When deciding the color scheme, I wanted to go with something that gave an elega
 
 
 ## **Features**
-###  **Header Element**
-The header element sticks to the top of the page as the user scrolls up and down. Originally I had designed the page with a "return to top" link at the bottom of the page. However, a Code Institute graduate pointed out that the sticky header would provide a more pleasant UX and adhere to popular conventions better. The header itself contains the following features: 
-
-#### *Title:*
-![Page title](docs/screenshots/title.png)
-
-* The title serves to state the name of the community.
-* It also serves as a navigation link to the home page as per the well-established convention expected by the user.
-
-#### *Navigation Bar:*
-* The navigation bar appears on all four pages (including the form feedback page). 
-* It contains links to the home, gallery,sign up, and about us page to allow easy navigation around the website. 
-* The below image shows the user's current page highlighted in blue with a white border. 
-![Navigation bar](docs/screenshots/nav-bar.png)
-***
-
-## **Footer**
-* The footer includes direct links to all  social media accounts.
-
-* These icons were imported from font awesome at the bottom of the page. 
-![Page footer](docs/screenshots/footer.png)
-
 
 ## **Typography**
-* Throughout the page, there are three fonts used:
-  * Lato sans-serif - For the title to give it a strong presence.
-  * Lato sans-serif - For all other headings including the navbar. 
-  * Oswald sans-serif - for all content text.
-
+* 1. Primary Font Family for Most Text:
+Font Family: 'Arial', sans-serif
+* 2. Headings and Important Text:
+Font Family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+* The choice of fonts aims to balance readability with aesthetic appeal, ensuring that the text remains clear and visually engaging across different devices and screen sizes.
 * All fonts were sourced from Google fonts, as stated in the credits.
 

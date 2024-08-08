@@ -22,6 +22,7 @@ This page is dedicated to dedicated to astrology, likely offering users informat
     * [***Wireframes***](#wireframes)
     * [***Color Scheme***](#color-scheme)
 3. [**Features**](#features)
+    * [**Header**](#Header)
     * [**Footer**](#footer)
     * [**Typography**](#typography)
 4. [**Key features**](#page-content-features)
@@ -30,6 +31,7 @@ This page is dedicated to dedicated to astrology, likely offering users informat
     * [**Horoscope**](#horoscope)
     * [**Music Player**](#music-player)
     * [**Confetti Animation**](#confetti-animation)
+    * [**Interactive Quiz**](#interactive-quiz)
 5. [**Future-Enhancements**](#future-enhancements)
 6. [**Testing Phase**](#testing-phase)
 7. [**Deployment**](#deployment)
@@ -135,11 +137,195 @@ When deciding the color scheme, I wanted to go with something that gave an elega
 
 ## **Features**
 
+## **Header**
+1. Title and Logo: The page title "Astro With Me" is accompanied by a logo image that visually represents the brand.
+2. Music Controls: Icons for play and pause allow users to control background music directly from the header.
+
+![Header](docs/screenshots/header.png)
+
+## **Footer**
+1. Copyright Notice: A message indicating that the site was "Crafted with care by Preeti, 2024," with all rights reserved.
+2. Contact Link: There is an option to contact you, presumably via email or another method.
+3. Dynamic Year: The year updates automatically, ensuring the footer stays current without manual updates.
+![Page footer](docs/screenshots/footer.png)
+
 ## **Typography**
-* 1. Primary Font Family for Most Text:
-Font Family: 'Arial', sans-serif
-* 2. Headings and Important Text:
-Font Family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-* The choice of fonts aims to balance readability with aesthetic appeal, ensuring that the text remains clear and visually engaging across different devices and screen sizes.
-* All fonts were sourced from Google fonts, as stated in the credits.
+1. Primary Font Family for Most Text:
+Font Family: 'Arial', sans-serif.
+2. Headings and Important Text:
+Font Family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif.
+
+Note: The choice of fonts aims to balance readability with aesthetic appeal, ensuring that the text remains clear and visually engaging across different devices and screen sizes.All fonts were sourced from Google fonts, as stated in the credits.
+
+## **Key features**
+### **Zodiac Sign Calculation:**
+* User Input: Users can input their birthdate, birth time, and birth location.
+* Zodiac Sign Display: The site calculates and displays the user's zodiac sign based on the inputted birthdate.
+
+![Zodiac Sign Calculation](docs/screenshots/zodiac-sign-calculation.png)
+
+### **Numerology and Birth Chart:**
+* Numerology: The site provides numerology details based on the user’s name and birthdate.
+* Birth Chart: Although not visible in detail, there is a section to display the birth chart, which is likely calculated using the inputted birth information.
+
+![Numerology and Birth Chart](docs/screenshots/numerology-and-birth-chart.png)
+
+### **Horoscope:**
+* Daily Horoscope: There is a feature to display daily horoscopes for users, based on their zodiac sign.
+
+![Horoscope](docs/screenshots/horoscope.png)
+
+### **Music Player**
+* Background Music: There is a feature that allows users to play and pause background music. This can enhance the ambiance while browsing the site.
+* Music Controls: Simple play and pause controls are provided at the top of the page.
+
+![Music Player](docs/screenshots/music-player.png)
+
+### **Confetti Animation**
+* Celebratory Animation: There is an embedded script for confetti animations, which could be triggered upon submiting form.
+
+![Confetti Animation](docs/screenshots/confetti-animation.png)
+
+### **Interactive Quiz**
+* Name Entry: Users are prompted to enter their name to start the quiz.
+* Quiz Questions: After starting the quiz, users can answer questions that seem related to astrology or personality traits.
+* Quiz Results: The quiz results are displayed after submission, providing users with insights or outcomes based on their answers.
+
+![Interactive Quiz](docs/screenshots/interactive-quiz.png)
+
+## **Future-Enhancements**
+1. Personalized Daily/Weekly Horoscopes
+User Accounts: Implement a user registration and login system so users can save their birth details and get personalized horoscopes.
+Personalized Content: Provide personalized daily, weekly, and monthly horoscopes based on saved birth details.
+
+2. Interactive Birth Chart
+Visual Birth Charts: Generate and display detailed birth charts with explanations for various astrological houses and aspects.
+User Input: Allow users to enter their birth details and see an interactive birth chart.
+
+3. Astrology Blog
+Educational Articles: Regularly publish articles about astrology, zodiac signs, planetary transits, etc.
+User Interaction: Allow users to comment on articles and engage in discussions.
+
+4. Compatibility Analysis
+Zodiac Compatibility: Provide tools for users to check their compatibility with others based on zodiac signs.
+Numerology Compatibility: Include numerology compatibility analysis.
+
+5. Astrology Tools and Calculators
+Numerology Calculator: Provide tools for calculating life path numbers, destiny numbers, etc.
+Astrology Calculators: Include moon sign, rising sign calculators, etc.
+
+6. Consultation Services
+Booking System: Implement a booking system for astrology consultations.
+Consultation Types: Offer different types of consultations such as love, career, and personal growth readings.
+
+7. Community Features
+Forums: Create a forum for users to discuss astrology topics.
+Groups: Allow users to form interest-based groups.
+
+8. Enhanced User Interface and Experience
+Dark Mode: Add a dark mode option for user comfort.
+Responsive Design: Ensure the site is fully responsive and looks good on all devices, especially mobile.
+
+9. Mobile App
+App Development: Develop a mobile app to provide easy access to horoscopes, articles, and other features.
+Push Notifications: Send daily horoscopes and updates via push notifications.
+
+10. E-commerce Integration
+Astrology Reports: Sell detailed astrology reports.
+Astrology Merchandise: Offer merchandise like zodiac-themed jewelry, books, etc.
+
+11. Astrology Courses and Webinars
+Online Courses: Offer online courses on astrology basics, advanced techniques, etc.
+Live Webinars: Host live webinars with astrology experts.
+
+12. Multilingual Support
+Multiple Languages: Provide content in multiple languages to cater to a global audience.
+***
+
+## **Testing Phase**
+I have included details of testing both during development and post development in a separate document called [TESTING.md](TESTING.md).
+***
+
+
+## **Deployment**
+The site was deployed to GitHub pages. The steps taken to deploy are as follows:
+1. Log in to [Github](https://github.com/)
+2. Navigate to [preeticancode/hike-with-me](https://github.com/preeticancode/HIKE-WITH.gitME) in  
+   the list of repositories
+3. In the GitHub repository, navigate to the [Settings] tab
+4. In Settings scroll down to [GitHub pages] which opens in a new page.
+5. From the source section drop-down menu, select the Master Branch
+6. Once the master branch has been selected, the page is automatically refreshed and a display indicates the successful deployment and the link to the address.
+
+The link to the live website is here:
+https://preeticancode.github.io/hike-with-me/
+***
+
+## **Credits**
+### **Frameworks, Libraries & Programs Used**
+Balsamiq - Used to create wireframes.
+
+Git - For version control.
+
+Gitpod - To work on website as workspace.
+
+Github - To save and store the files for the website.
+
+Google Fonts - To import the fonts used on the website.
+
+Font Awesome - For the iconography on the website.
+
+Google Dev Tools - To troubleshoot and test features, solve issues with responsiveness and 
+    styling.
+
+Tiny PNG To compress images.
+
+Convertio To convert images to webp format.
+
+Redketchup to resize image.
+
+Favicon.io To create favicon.
+
+Am I Responsive? To show the website image on a range of devices.
+
+### **Content**
+All content was written by myself and fewtext for the Home page was taken google article.
+
+Form contents and footer code used on main page taken from Love Running Project.
+
+The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+
+Accessibility checker - [WAVE - Web accessibility evaluation tool](https://wave.webaim.org/)
+
+The golden gradient colour scheme - [brandgradients.com](http://www.brandgradients.com/gold-gradient).
+  
+
+### **Media**
+The photos used on the home and sign up page are from our group hiking trip and some are mine.
+
+The some images used for the gallery page were taken from open source site (pixabay).
+
+Screenshot under README.md section titled "site overview" was created view [Am I responsive](http://ami.responsivedesign.is)
+
+Color grid contract tool - [Eightshapes](https://contrast-grid.eightshapes.com/) 
+
+
+### **Honorable mentions**
+I would like to take the opportunity to thank:
+- My mentor David Bowers for his feedback, advice, guidance and support.
+- My husband Rajesh for his support, advice, help with testing, and for giving me some kids free 
+  time to work on my project.
+- To the lovely people on the Code Institute Slack for providing peer code reviews.
+- My friends and community memebers who are part of HIKE WITH ME.
+***
+
+### **References**
+Code institute Learning Materials
+
+Code Institute Walkthrough projec: Love Running.
+
+My Mentors Project : Modern Buddhism
+***
+
+
 

@@ -238,26 +238,6 @@ footer {
     box-sizing: border-box; /* Include padding in element's width and height */
 }
 
-.footer-links {
-    margin-top: 10px;
-}
-
-.footer-links a {
-    color: #ecf0f1; /* Light color for contrast */
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #3498db; /* Accent color on hover */
-}
-
-.footer-links i {
-    margin-right: 5px;
-}
-
 /* Global Styles */
 body, html {
     font-family: 'Arial', sans-serif;

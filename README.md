@@ -316,6 +316,8 @@ Accessibility checker - [WAVE - Web accessibility evaluation tool](https://wave.
 The Confetti is taken from [JSDelivr](https://www.jsdelivr.com/)
 
 The animated cursor is taken from [Free Cursors](https://totallyfreecursors.com/)
+
+Background Music: Sourced from [chosic](https://www.chosic.com/)
   
 
 ### **Media**

@@ -86,6 +86,12 @@ Below is a list of bugs I found during the development process by testing myself
 ![CSS validator badge](https://jigsaw.w3.org/css-validator/images/vcss)
 ![CSS validator badge](https://jigsaw.w3.org/css-validator/images/vcss-blue)
 
+#### ***JS*** - https://jshint.com//
+![JSHINT](docs/screenshots/jshint.png) 
+Thereis no undefinec and unused One undefined variable
+169	confetti
+One unused variable
+
 ### **Lighthouse Scores**
 ### **Test conditions**
 * I did all lighthouse tests in incognito mode to avoid interference from browser extensions. 
@@ -107,8 +113,7 @@ In addition to the accessability score on light house I also used [WAVE - Web ac
 
 
 ### **Unfixed bugs**
-Migration from a personal email address to a student Google Workspace email address for your GitHub and Gitpod accounts caused some confusion, especially regarding your GitHub contributions.
-![unfixed bug pic](docs/screenshots/unfixedbug.png)
+Changed the name gihub repository from project two to Astro-with-me
 ***
 
 [return to README.md](README.md)

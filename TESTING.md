@@ -113,7 +113,7 @@ In addition to the accessability score on light house I also used [WAVE - Web ac
 
 
 ### **Unfixed bugs**
-Changed the name gihub repository from project two to Astro-with-me
+Changed the name gihub repository name from project two to Astro-with-me
 ***
 
 [return to README.md](README.md)

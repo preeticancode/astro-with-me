@@ -24,12 +24,12 @@ This page is dedicated to dedicated to astrology, likely offering users informat
 3. [**Features**](#features)
     * [**Footer**](#footer)
     * [**Typography**](#typography)
-4. [**Individual Page Content features**](#individual-page-content-features)
-    * [**Home Page Content**](#about-page-content)
-    * [**Gallery Page Content**](#teachings-page-content)
-    * [**Sign Up Page Content**](#community-page-content)
-    * [**About Us Page Content**](#contact-page-content)
-    * [**Sign Up Feedback Page Content**](#form-feedback-page-content)
+4. [**Key features**](#page-content-features)
+    * [**Zodiac Sign Calculation**](#zodiac-sign-calculation)
+    * [**Numerology and Birth Chart**](#numerology-and-birth-chart)
+    * [**Horoscope**](#horoscope)
+    * [**Music Player**](#music-player)
+    * [**Confetti Animation**](#confetti-animation)
 5. [**Future-Enhancements**](#future-enhancements)
 6. [**Testing Phase**](#testing-phase)
 7. [**Deployment**](#deployment)
@@ -122,7 +122,7 @@ So that: I avoid errors and receive accurate results
 To organize my thoughts and prevent scope creep, I created wireframes for this project. Below are links to each of the mobile and desktop versions of the four intended pages. 
 
 * Wireframes:
-    * [Homepage (About)](docs/wireframes/index.png)
+    * [Main Page](docs/wireframes/index.png)
    
   There was some deviation from the original wireframes to improve the User Experience (UX).
 

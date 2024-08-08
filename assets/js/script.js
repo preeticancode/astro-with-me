@@ -344,3 +344,5 @@ window.onload = () => {
     setupMusicControls();
     setupQuiz();
 };
+// Dynamic Year: The year updates automatically, ensuring the footer stays current without manual updates.
+document.getElementById("currentYear").textContent = new Date().getFullYear();
